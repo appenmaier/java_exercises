@@ -1,0 +1,8 @@
+Aufgabe Variablen-3
+
+Alter: byte, short
+Jahresgehalt: short, int
+Geschlecht: char, String
+Anrede: String
+Eulersche Zahl: double
+Gewicht: byte, short

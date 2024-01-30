@@ -1,0 +1,9 @@
+Aufgabe Felder-1
+
+arrayOne.length: 3
+arrayTwo.length: 5
+arrayOne[1]: 2
+arrayTwo[3]: 8
+arrayTwo[arrayOne.length]: 8
+arrayOne[arrayOne.length - 1]: 15
+arrayTwo[10]: ArrayIndexOutOfBoundsException

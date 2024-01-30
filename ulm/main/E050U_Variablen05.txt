@@ -1,0 +1,12 @@
+Aufgabe Variablen-5
+
+int eggs;
+eggs = 4;
+
+double milk = 100;
+
+double flour = 200;
+flour += 150;
+
+int apple;
+apple = eggs;

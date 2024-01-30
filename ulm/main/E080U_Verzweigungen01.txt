@@ -1,0 +1,11 @@
+Aufgabe Verzweigungen-1
+
+a != 4: false
+a > b: true
+b == c: true
+(b+1) == 4: true
+(a/b) == 1: true
+(b/a) > 0: false
+(a%e) != 0: false
+(a > 0) && (a < = 4): true
+!(e < c): false

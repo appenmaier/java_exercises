@@ -1,0 +1,10 @@
+Aufgabe Variablen-4
+
+Variable            Deklaration (Zeile)    Initialisierung (Zeile)
+---------------------------------------------------------------
+number                4                    8
+word                  5                    9
+realNumber            6                    10
+anotherNumber        15                    15
+anotherWord          16                    16
+anotherRealNumber    17                    17

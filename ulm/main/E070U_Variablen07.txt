@@ -1,0 +1,11 @@
+Aufgabe Variablen-7
+
+Zeile	Fehler                            Korrektur
+ 5		System.out                        System.in
+ 6		3,1415                            3.1415
+10		)                                 );
+15		^                                 radius * radius
+20		"Circumference: + circumference"  "Circumference: " + circumference
+22		LateralSurfaceArea                lateralSurfaceArea
+23		surface                           + surface
+24		;                                 );

@@ -1,0 +1,4 @@
+Aufgabe Exception-1.1.2
+
+Frage: Welche Ausnahmen muessen abgefangen werden?
+Antwort: LineUnavailableException, IOException, UnsupportedAudioFileException, InterruptedException
