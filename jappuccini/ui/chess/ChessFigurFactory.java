@@ -10,18 +10,18 @@ public abstract class ChessFigurFactory {
   public static Map<Integer, ChessFigur> createChessFigurSet(boolean isWhite) {
     Color color = isWhite ? Color.WHITE : Color.BLACK;
 
-    ImageIcon rookIcon = isWhite ? new ImageIcon("src/jappuccini/ui/chess/rook_white.png")
-        : new ImageIcon("src/jappuccini/ui/chess/rook_black.png");
-    ImageIcon bishopIcon = isWhite ? new ImageIcon("src/jappuccini/ui/chess/bishop_white.png")
-        : new ImageIcon("src/jappuccini/ui/chess/bishop_black.png");
-    ImageIcon knightIcon = isWhite ? new ImageIcon("src/jappuccini/ui/chess/knight_white.png")
-        : new ImageIcon("src/jappuccini/ui/chess/knight_black.png");
-    ImageIcon kingIcon = isWhite ? new ImageIcon("src/jappuccini/ui/chess/king_white.png")
-        : new ImageIcon("src/jappuccini/ui/chess/king_black.png");
-    ImageIcon queenIcon = isWhite ? new ImageIcon("src/jappuccini/ui/chess/queen_white.png")
-        : new ImageIcon("src/jappuccini/ui/chess/queen_black.png");
-    ImageIcon pawnIcon = isWhite ? new ImageIcon("src/jappuccini/ui/chess/pawn_white.png")
-        : new ImageIcon("src/jappuccini/ui/chess/pawn_black.png");
+    ImageIcon rookIcon = isWhite ? new ImageIcon("jappuccini/ui/chess/rook_white.png")
+        : new ImageIcon("jappuccini/ui/chess/rook_black.png");
+    ImageIcon bishopIcon = isWhite ? new ImageIcon("jappuccini/ui/chess/bishop_white.png")
+        : new ImageIcon("jappuccini/ui/chess/bishop_black.png");
+    ImageIcon knightIcon = isWhite ? new ImageIcon("jappuccini/ui/chess/knight_white.png")
+        : new ImageIcon("jappuccini/ui/chess/knight_black.png");
+    ImageIcon kingIcon = isWhite ? new ImageIcon("jappuccini/ui/chess/king_white.png")
+        : new ImageIcon("jappuccini/ui/chess/king_black.png");
+    ImageIcon queenIcon = isWhite ? new ImageIcon("jappuccini/ui/chess/queen_white.png")
+        : new ImageIcon("jappuccini/ui/chess/queen_black.png");
+    ImageIcon pawnIcon = isWhite ? new ImageIcon("jappuccini/ui/chess/pawn_white.png")
+        : new ImageIcon("jappuccini/ui/chess/pawn_black.png");
 
     Map<Integer, ChessFigur> chessFigurs = new HashMap<>();
     for (ChessFigurType type : ChessFigurType.values()) {

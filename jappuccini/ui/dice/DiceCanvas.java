@@ -26,12 +26,12 @@ public class DiceCanvas extends JPanel {
     int y = (int) bounds.getCenterY() - 45;
     try {
       BufferedImage image = switch (dice.getValue()) {
-        case 1 -> ImageIO.read(new File("src/jappuccini/ui/dice/one.png"));
-        case 2 -> ImageIO.read(new File("src/jappuccini/ui/dice/two.png"));
-        case 3 -> ImageIO.read(new File("src/jappuccini/ui/dice/three.png"));
-        case 4 -> ImageIO.read(new File("src/jappuccini/ui/dice/four.png"));
-        case 5 -> ImageIO.read(new File("src/jappuccini/ui/dice/five.png"));
-        case 6 -> ImageIO.read(new File("src/jappuccini/ui/dice/six.png"));
+        case 1 -> ImageIO.read(new File("jappuccini/ui/dice/one.png"));
+        case 2 -> ImageIO.read(new File("jappuccini/ui/dice/two.png"));
+        case 3 -> ImageIO.read(new File("jappuccini/ui/dice/three.png"));
+        case 4 -> ImageIO.read(new File("jappuccini/ui/dice/four.png"));
+        case 5 -> ImageIO.read(new File("jappuccini/ui/dice/five.png"));
+        case 6 -> ImageIO.read(new File("jappuccini/ui/dice/six.png"));
         default -> null;
       };
       g.drawImage(image, x, y, null);
