@@ -1,6 +1,7 @@
 package jappuccini.apps.circles;
 
 import java.net.URL;
+import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,12 +14,9 @@ public class Controller implements Initializable {
 
   @FXML
   private Canvas canvas;
-  private Model model;
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-    model = Model.getInstance();
-
     GraphicsContext g = canvas.getGraphicsContext2D();
     g.setFill(Color.WHITE);
     g.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
@@ -26,11 +24,19 @@ public class Controller implements Initializable {
 
   @FXML
   public void drawCircle(ActionEvent actionEvent) {
-    Circle circle = model.getCircle(0, (int) canvas.getWidth(), 0, (int) canvas.getHeight());
+    Random random = new Random();
+    int d = random.nextInt(10, 100);
+    int x = random.nextInt(0, (int) canvas.getWidth() - d);
+    int y = random.nextInt(0, (int) canvas.getHeight() - d);
+    double red = random.nextDouble(1);
+    double green = random.nextDouble(1);
+    double blue = random.nextDouble(1);
+    double opacity = random.nextDouble(0.5, 1);
+    Color color = new Color(red, green, blue, opacity);
 
     GraphicsContext g = canvas.getGraphicsContext2D();
-    g.setFill(circle.getColor());
-    g.fillOval(circle.getX(), circle.getY(), circle.getR() * 2, circle.getR() * 2);
+    g.setFill(color);
+    g.fillOval(x, y, d, d);
   }
 
 }

@@ -1,9 +1,12 @@
 package jappuccini.apps.login;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -12,13 +15,18 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class LoginController {
+public class LoginController implements Initializable {
 
   @FXML
   private TextField userNameTextField;
-
   @FXML
   private PasswordField passwordPasswordField;
+  private Model model;
+
+  @Override
+  public void initialize(URL location, ResourceBundle resources) {
+    model = Model.getInstance();
+  }
 
   @FXML
   public void login(ActionEvent actionEvent) throws IOException {
@@ -31,7 +39,7 @@ public class LoginController {
       return;
     }
 
-    Model model = Model.getInstance();
+    model = Model.getInstance();
     if (!model.setUser(userName, password)) {
       Alert alert = new Alert(AlertType.ERROR, "Fehlerhafte Anmeldedaten");
       alert.show();

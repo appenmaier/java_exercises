@@ -38,7 +38,14 @@ public class Controller implements Initializable {
       interestRate = Double.valueOf(interestRateTextField.getText());
       runningTime = Integer.valueOf(runningTimeTextField.getText());
     } catch (NumberFormatException e) {
-      Alert alert = new Alert(AlertType.ERROR, e.getMessage());
+      Alert alert = new Alert(AlertType.ERROR, "Bitte nur ganze Zahlen eingeben");
+      alert.show();
+      interestLabel.setText("");
+      return;
+    }
+
+    if (initialCapital <= 0 || interestRate <= 0 || runningTime <= 0) {
+      Alert alert = new Alert(AlertType.ERROR, "Bitte nur ganze Zahlen größer als Null eingeben");
       alert.show();
       interestLabel.setText("");
       return;

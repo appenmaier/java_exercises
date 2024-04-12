@@ -10,10 +10,11 @@ public class UserController implements Initializable {
 
   @FXML
   private Label greetingsLabel;
+  private Model model;
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-    Model model = Model.getInstance();
+    model = Model.getInstance();
     User user = model.getUser();
     greetingsLabel.setText("Hallo " + user.getFirstName() + " " + user.getFamilyName());
   }

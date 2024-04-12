@@ -19,8 +19,8 @@ public class Model {
     return instance;
   }
 
-  public boolean addBall(Ball ball) {
-    return balls.add(ball);
+  public void addBall(Ball ball) {
+    balls.add(ball);
   }
 
   public List<Ball> getBalls() {
