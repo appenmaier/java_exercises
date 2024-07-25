@@ -15,7 +15,7 @@ public class E640T_I9_111 {
 
   public static void main(String[] args) {
 
-    File file = new File("src/tutego/resources/family-names.txt");
+    File file = new File("tutego/resources/family-names.txt");
 
     try {
       @SuppressWarnings("resource")

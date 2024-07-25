@@ -26,7 +26,7 @@ public class Inputs implements Serializable {
     public String input;
   }
 
-  private static final String PATH = "src/tutego/resources/inputs.bin";
+  private static final String PATH = "tutego/resources/inputs.bin";
   private static final long serialVersionUID = 1L;
 
   public static Inputs getInputs() {

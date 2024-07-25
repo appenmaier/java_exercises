@@ -27,7 +27,7 @@ public class E780_IOStreams01 {
 
     Scanner scanner = new Scanner(System.in);
 
-    file = new File("src/jappuccini/resources/students.txt");
+    file = new File("jappuccini/resources/students.txt");
     if (!file.exists()) {
       file.createNewFile();
     }
