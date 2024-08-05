@@ -28,7 +28,7 @@ public class E790_IOStreams02 {
 
     Scanner scanner = new Scanner(System.in);
 
-    file = new File("src/jappuccini/resources/students.bin");
+    file = new File("jappuccini/resources/students.bin");
     if (!file.exists()) {
       file.createNewFile();
     }
@@ -41,9 +41,9 @@ public class E790_IOStreams02 {
     if (answer == 1) {
       read();
     } else {
-      Student student1 = new Student("8172093", "Hans Maier", 'm');
-      Student student2 = new Student("2335409", "Peter Mueller", 'm');
-      Student student3 = new Student("5065411", "Lisa Schmid", 'w');
+      Student student1 = new Student("Hans Maier", 19);
+      Student student2 = new Student("Peter Mueller", 23);
+      Student student3 = new Student("Lisa Schmid", 20);
       students.add(student1);
       students.add(student2);
       students.add(student3);

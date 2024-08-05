@@ -41,9 +41,9 @@ public class E780_IOStreams01 {
     if (answer == 1) {
       read();
     } else {
-      Student student1 = new Student("8172093", "Hans Maier", 'm');
-      Student student2 = new Student("2335409", "Peter Mueller", 'm');
-      Student student3 = new Student("5065411", "Lisa Schmid", 'w');
+      Student student1 = new Student("Hans Maier", 19);
+      Student student2 = new Student("Peter Mueller", 23);
+      Student student3 = new Student("Lisa Schmid", 20);
       students.add(student1);
       students.add(student2);
       students.add(student3);
@@ -59,10 +59,9 @@ public class E780_IOStreams01 {
       String line;
       while ((line = bufferedReader.readLine()) != null) {
         String[] tokens = line.split(";");
-        String id = tokens[0];
-        String name = tokens[1];
-        char gender = tokens[2].charAt(0);
-        Student student = new Student(id, name, gender);
+        String name = tokens[0];
+        int age = Integer.valueOf(tokens[1]);
+        Student student = new Student(name, age);
         students.add(student);
       }
     } catch (IOException e) {
@@ -74,7 +73,7 @@ public class E780_IOStreams01 {
     try (FileWriter fileWriter = new FileWriter(file, false);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
       for (Student s : students) {
-        String line = s.id() + ";" + s.name() + ";" + s.gender();
+        String line = s.name() + ";" + s.age();
         bufferedWriter.write(line);
         bufferedWriter.newLine();
       }
