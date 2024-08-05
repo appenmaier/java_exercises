@@ -31,7 +31,7 @@ public class E520_Interfaces01 {
 
     agency.addPartner(rental);
 
-    agency.print();
+    System.out.println(agency);
 
   }
 

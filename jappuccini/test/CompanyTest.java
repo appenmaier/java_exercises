@@ -1,4 +1,4 @@
-package jappuccini.main;
+package jappuccini.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -11,13 +11,13 @@ import jappuccini.model.SalaryDecreaseException;
 import jappuccini.model.SalaryIncreaseTooHighException;
 
 /**
- * UnitTests01
+ * CompanyTest
  *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class E740_UnitTests01 {
+public class CompanyTest {
 
   private static Company company;
   private static Employee employee;
@@ -30,18 +30,18 @@ public class E740_UnitTests01 {
 
   @Test
   void testSetSalary1() throws SalaryDecreaseException, SalaryIncreaseTooHighException {
-    employee.setSalary(55000);
-    assertEquals(55000, employee.getSalary());
+    employee.setSalaryInEuro(55000);
+    assertEquals(55000, employee.getSalaryInEuro());
   }
 
   @Test
   void testSetSalary2() {
-    assertThrows(SalaryDecreaseException.class, () -> employee.setSalary(49999));
+    assertThrows(SalaryDecreaseException.class, () -> employee.setSalaryInEuro(49999));
   }
 
   @Test
   void testSetSalary3() {
-    assertThrows(SalaryIncreaseTooHighException.class, () -> employee.setSalary(55001));
+    assertThrows(SalaryIncreaseTooHighException.class, () -> employee.setSalaryInEuro(55001));
   }
 
 }

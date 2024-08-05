@@ -17,12 +17,12 @@ public abstract class Vehicle {
   }
   /* version 2.0: - */
 
-  private Engine engine;
   private String make;
   private String model;
+  private Engine engine;
   /* version 3.0: - */
-  protected int speed;
-  /* version 4.0: private int speed */
+  protected int speedInKmh;
+  /* version 4.0: private int speedInKmh */
 
   public Vehicle(String make, String model, Engine engine) {
     this.make = make;
@@ -40,38 +40,38 @@ public abstract class Vehicle {
    */
   /* version 1.0: - */
 
-  public final void accelerate(int value) throws InvalidValueException {
-    if (value <= 0) {
-      throw new InvalidValueException("Invalid Value: " + value);
+  public final void accelerate(int valueInKmh) throws InvalidValueException {
+    if (valueInKmh <= 0) {
+      throw new InvalidValueException("Invalid Value: " + valueInKmh);
     }
 
-    speed += value;
-    System.out.println(make + " " + model + " beschleunigt auf " + speed + " km/h");
+    speedInKmh += valueInKmh;
+    System.out.println(make + " " + model + " beschleunigt auf " + speedInKmh + " km/h");
   }
   /*
-   * version 6.0: public final void accelerate(int value) { speed += value; System.out.println(make
-   * + " " + model + " beschleunigt auf " + speed + " km/h"); }
+   * version 6.0: public final void accelerate(int valueInKmh) { speedInKmh += valueInKmh;
+   * System.out.println(make + " " + model + " beschleunigt auf " + speedInKmh + " km/h"); }
    */
   /*
-   * version 5.0: public void accelerate(int value) { speed += value; System.out.println(make + " "
-   * + model + " beschleunigt auf " + speed + " km/h"); }
+   * version 5.0: public void accelerate(int valueInKmh) { speedInKmh += valueInKmh;
+   * System.out.println(make + " " + model + " beschleunigt auf " + speedInKmh + " km/h"); }
    */
 
-  public final void brake(int value) throws InvalidValueException {
-    if (value <= 0) {
-      throw new InvalidValueException("Invalid Value: " + value);
+  public final void brake(int valueInKmh) throws InvalidValueException {
+    if (valueInKmh <= 0) {
+      throw new InvalidValueException("Invalid Value: " + valueInKmh);
     }
 
-    speed -= value;
-    System.out.println(make + " " + model + " bremst auf " + speed + " km/h ab");
+    speedInKmh -= valueInKmh;
+    System.out.println(make + " " + model + " bremst auf " + speedInKmh + " km/h ab");
   }
   /*
-   * version 6.0: public final void brake(int value) { speed -= value; System.out.println(make + " "
-   * + model + " bremst auf " + speed + " km/h ab"); }
+   * version 6.0: public final void brake(int valueInKmh) { speedInKmh -= valueInKmh;
+   * System.out.println(make + " " + model + " bremst auf " + speedInKmh + " km/h ab"); }
    */
   /*
-   * version 5.0: public void brake(int value) { speed -= value; System.out.println(make + " " +
-   * model + " bremst auf " + speed + " km/h ab"); }
+   * version 5.0: public void brake(int valueInKmh) { speedInKmh -= valueInKmh;
+   * System.out.println(make + " " + model + " bremst auf " + speedInKmh + " km/h ab"); }
    */
 
   public Engine getEngine() {
@@ -88,8 +88,22 @@ public abstract class Vehicle {
   }
 
   public int getSpeed() {
-    return speed;
+    return speedInKmh;
   }
+
+  @Override
+  public String toString() {
+    return "Vehicle [make=" + make + ", model=" + model + ", engine.description="
+        + engine.getDescription() + ", speedInKmh=" + speedInKmh + "]";
+  }
+  /*
+   * version 5.0: public String toString() { return "Vehicle [make=" + make + ", model=" + model +
+   * ", engine.description=" + engine.getDescription()+ "]"; }
+   */
+  /*
+   * version 3.0: public String toString() { return "Vehicle [make=" + make + ", model=" + model +
+   * "]"; }
+   */
 
   // public void setModel(String model) {
   // this.model = model;
@@ -104,13 +118,6 @@ public abstract class Vehicle {
   /*
    * version 1.0: public void setMake(String make) { this.make = make; }
    */
-
-  public abstract void print();
-  /*
-   * version 5.0: public void print() { System.out.println(make + " " + model + "(" +
-   * engine.getDescription() + ")"); }
-   */
-  /* version 3.0: public void print() { System.out.println(make + " " + model); } */
 
 }
 /* version 5.0: public class Vehicle {...} */

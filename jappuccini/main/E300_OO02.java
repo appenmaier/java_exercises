@@ -25,7 +25,7 @@ public class E300_OO02 {
 
     for (int i = 0; i < vehicles.size(); i++) {
       Vehicle v = vehicles.get(i);
-      v.print();
+      System.out.println(v);
     }
 
   }

@@ -1,6 +1,6 @@
 package jappuccini.model;
 
-import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Optional;
 
@@ -11,9 +11,7 @@ import java.util.Optional;
  * @version 2.0
  *
  */
-public class TelephoneBook {
-
-  private HashMap<Person, TelephoneNumber> entries = new HashMap<>();
+public record TelephoneBook(Map<Person, TelephoneNumber> entries) {
 
   public void addEntry(Person person, TelephoneNumber telephoneNumber) {
     entries.put(person, telephoneNumber);
@@ -22,11 +20,11 @@ public class TelephoneBook {
   public Optional<TelephoneNumber> getTelephoneNumberByName(String name) {
     for (Entry<Person, TelephoneNumber> entry : entries.entrySet()) {
       if (entry.getKey().name().equals(name)) {
-        return Optional.of(entry.getValue());
+        return Optional.ofNullable(entry.getValue());
       }
     }
     return Optional.empty();
-    // return Optional.ofNullable(entries.get(new Person(name)));
+    // return Optional.ofNullableNullable(entries.get(new Person(name)));
   }
   /*
    * version 1.0: public TelephoneNumber getTelephoneNumberByName(String name) { for (Entry<Person,

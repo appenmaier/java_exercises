@@ -4,18 +4,17 @@ import java.util.ArrayList;
 
 /**
  * Reisebuero
- * 
+ *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
 public class TravelAgency {
 
-  private String name;
+  private final String name;
   private ArrayList<Partner> partners;
 
   public TravelAgency(String name) {
-    super();
     this.name = name;
     partners = new ArrayList<>();
   }
@@ -24,12 +23,9 @@ public class TravelAgency {
     partners.add(partner);
   }
 
-  public void print() {
-    System.out.println(name);
-    System.out.println("Unsere Partner:");
-    for (Partner p : partners) {
-      p.print();
-    }
+  @Override
+  public String toString() {
+    return "TravelAgency [name=" + name + ", partners=" + partners + "]";
   }
 
 }

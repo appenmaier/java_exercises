@@ -2,10 +2,10 @@ package jappuccini.model;
 
 /**
  * Fass
- * 
+ *
  * @author Daniel Appenmaier
  * @version 1.0
- * 
+ *
  */
 public class Barrel {
 
@@ -25,9 +25,17 @@ public class Barrel {
     fluidLevel += value;
   }
 
-  public void printFluidLevel() {
-    System.out.println("Fuellstand: " + fluidLevel);
+  public int getCapacity() {
+    return capacity;
   }
 
+  public int getFluidLevel() {
+    return fluidLevel;
+  }
+
+  @Override
+  public String toString() {
+    return "Barrel [capacity=" + capacity + ", fluidLevel=" + fluidLevel + "]";
+  }
 
 }

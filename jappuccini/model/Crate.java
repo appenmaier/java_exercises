@@ -42,12 +42,12 @@ public class Crate<T extends Bottle> {
 
   public Optional<T> takeBottle(int box) {
     return switch (box) {
-      case 1 -> Optional.of(box1);
-      case 2 -> Optional.of(box2);
-      case 3 -> Optional.of(box3);
-      case 4 -> Optional.of(box4);
-      case 5 -> Optional.of(box5);
-      case 6 -> Optional.of(box6);
+      case 1 -> Optional.ofNullable(box1);
+      case 2 -> Optional.ofNullable(box2);
+      case 3 -> Optional.ofNullable(box3);
+      case 4 -> Optional.ofNullable(box4);
+      case 5 -> Optional.ofNullable(box5);
+      case 6 -> Optional.ofNullable(box6);
       default -> Optional.empty();
     };
   }

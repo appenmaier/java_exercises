@@ -1,4 +1,4 @@
-package jappuccini.main;
+package jappuccini.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -13,13 +13,13 @@ import jappuccini.model.BookCollection;
 import jappuccini.model.DuplicateKeyException;
 
 /**
- * UnitTests04
+ * BookCollectionTest
  *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class E770_UnitTests04 {
+public class BookCollectionTest {
 
   private Book aClashOfKings;
   private Book aGameOfThrones;
@@ -55,8 +55,7 @@ public class E770_UnitTests04 {
   void testAddBook() {
     bookCollection.addBook(stephenKing, it);
     bookCollection.addBook(stephenKing, misery);
-    List<Book> booksFromStephenKing = bookCollection.collection()
-        .get(stephenKing);
+    List<Book> booksFromStephenKing = bookCollection.collection().get(stephenKing);
     assertEquals(it, booksFromStephenKing.get(0));
     assertEquals(misery, booksFromStephenKing.get(1));
     assertEquals(2, booksFromStephenKing.size());

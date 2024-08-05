@@ -34,16 +34,16 @@ public class E590_InnerClasses02 {
     company.addEmployee(company.new Employee(5, new Person("Miriam Albers"), 90000));
 
     try {
-      e1.setSalary(55000);
-      e2.setSalary(80000);
-      e3.setSalary(45000);
+      e1.setSalaryInEuro(55000);
+      e2.setSalaryInEuro(80000);
+      e3.setSalaryInEuro(45000);
     } catch (SalaryDecreaseException e) {
       System.err.println(e.getMessage());
     } catch (SalaryIncreaseTooHighException e) {
       System.err.println(e.getMessage());
     }
 
-    company.print();
+    System.out.println(company);
 
   }
 

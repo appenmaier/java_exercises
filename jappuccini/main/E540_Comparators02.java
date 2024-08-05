@@ -2,8 +2,9 @@ package jappuccini.main;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import jappuccini.model.Coordinate;
-import jappuccini.model.CoordinateComparator;
+import jappuccini.model.CoordinateByDistanceToOriginPointComparator;
 
 /**
  * Comparators02
@@ -16,18 +17,17 @@ public class E540_Comparators02 {
 
   public static void main(String[] args) {
 
-    ArrayList<Coordinate> coordinates = new ArrayList<>();
+    List<Coordinate> coordinates = new ArrayList<>();
     coordinates.add(new Coordinate(6, 2));
     coordinates.add(new Coordinate(1, 3));
     coordinates.add(new Coordinate(4, 3));
     coordinates.add(new Coordinate(3, 4));
 
-    Collections.sort(coordinates, new CoordinateComparator());
+    Collections.sort(coordinates, new CoordinateByDistanceToOriginPointComparator());
+
     for (Coordinate c : coordinates) {
       System.out.println(c);
     }
-    System.out.println();
-
   }
 
 }

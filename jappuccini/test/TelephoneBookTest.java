@@ -1,6 +1,7 @@
-package jappuccini.main;
+package jappuccini.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.HashMap;
 import java.util.Optional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,19 +10,19 @@ import jappuccini.model.TelephoneBook;
 import jappuccini.model.TelephoneNumber;
 
 /**
- * UnitTests03
+ * TelephoneBookTest
  *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class E760_UnitTests03 {
+public class TelephoneBookTest {
 
   private static TelephoneBook telephoneBook;
 
   @BeforeEach
   void setUp() {
-    telephoneBook = new TelephoneBook();
+    telephoneBook = new TelephoneBook(new HashMap<>());
     telephoneBook.addEntry(new Person("Hans Maier"), new TelephoneNumber("0751 86253"));
   }
 

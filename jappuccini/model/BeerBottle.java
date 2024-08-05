@@ -13,5 +13,4 @@ public class BeerBottle extends Bottle {
     System.out.println("Ex und Hopp");
   }
 
-
 }

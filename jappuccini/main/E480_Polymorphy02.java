@@ -26,7 +26,7 @@ public class E480_Polymorphy02 {
     rental.addVehicle(truck1);
     rental.addVehicle(car2);
 
-    rental.print();
+    System.out.println(rental);
 
   }
 

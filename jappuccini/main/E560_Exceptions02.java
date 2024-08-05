@@ -18,13 +18,13 @@ public class E560_Exceptions02 {
 
     try {
       barrel.addFluid(50);
-      barrel.printFluidLevel();
+      System.out.println(barrel);
       barrel.addFluid(51);
-      barrel.printFluidLevel();
+      System.out.println(barrel);
       barrel.addFluid(2);
-      barrel.printFluidLevel();
+      System.out.println(barrel);
     } catch (BarrelOverflowException e) {
-      e.printStackTrace();
+      System.err.println(e.getMessage());
     }
 
   }

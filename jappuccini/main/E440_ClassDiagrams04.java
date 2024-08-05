@@ -29,7 +29,7 @@ public class E440_ClassDiagrams04 {
      * Person("Miriam Albers"), 90000));
      */
 
-    company.print();
+    System.out.println(company);
 
   }
 

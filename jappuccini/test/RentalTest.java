@@ -1,4 +1,4 @@
-package jappuccini.main;
+package jappuccini.test;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -12,13 +12,13 @@ import jappuccini.model.Truck;
 import jappuccini.model.Vehicle;
 
 /**
- * UnitTests02
+ * RentalTest
  *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class E750_UnitTests02 {
+public class RentalTest {
 
   private static Rental rental;
 

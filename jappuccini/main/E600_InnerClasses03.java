@@ -3,6 +3,7 @@ package jappuccini.main;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 import jappuccini.model.Coordinate;
 
 /**
@@ -16,7 +17,7 @@ public class E600_InnerClasses03 {
 
   public static void main(String[] args) {
 
-    ArrayList<Coordinate> coordinates = new ArrayList<>();
+    List<Coordinate> coordinates = new ArrayList<>();
     coordinates.add(new Coordinate(6, 2));
     coordinates.add(new Coordinate(1, 3));
     coordinates.add(new Coordinate(4, 3));
@@ -25,14 +26,15 @@ public class E600_InnerClasses03 {
     class CoordinateByXAscendingComparator implements Comparator<Coordinate> {
       @Override
       public int compare(Coordinate o1, Coordinate o2) {
-        return Integer.valueOf(o1.getX()).compareTo(o2.getX());
+        return Integer.compare(o1.getX(), o2.getX());
       }
     }
+
     Collections.sort(coordinates, new CoordinateByXAscendingComparator());
+
     for (Coordinate c : coordinates) {
       System.out.println(c);
     }
-    System.out.println();
 
   }
 

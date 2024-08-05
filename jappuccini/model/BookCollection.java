@@ -1,8 +1,8 @@
 package jappuccini.model;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Optional;
 
@@ -13,7 +13,7 @@ import java.util.Optional;
  * @version 2.0
  *
  */
-public record BookCollection(HashMap<Author, List<Book>> collection) {
+public record BookCollection(Map<Author, List<Book>> collection) {
 
   public void addAuthor(Author author) throws DuplicateKeyException {
     if (collection.containsKey(author)) {
@@ -31,7 +31,7 @@ public record BookCollection(HashMap<Author, List<Book>> collection) {
     for (List<Book> books : collection.values()) {
       for (Book b : books) {
         if (b.title().equals(title)) {
-          return Optional.of(b);
+          return Optional.ofNullable(b);
         }
       }
     }

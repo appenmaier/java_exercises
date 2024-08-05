@@ -21,7 +21,7 @@ public class E580_InnerClasses01 {
     house.addRoom(house.new Room("Kueche"));
     house.addRoom(house.new Room("WC"));
 
-    house.displayRooms();
+    System.out.println(house);
 
   }
 

@@ -1,5 +1,6 @@
 package jappuccini.main;
 
+import jappuccini.model.Footballer;
 import jappuccini.model.FootballerQueries;
 
 /**
@@ -12,36 +13,37 @@ import jappuccini.model.FootballerQueries;
 public class E730_JavaStreamAPI02 {
 
   public static void main(String[] args) {
+
+    FootballerQueries queries = new FootballerQueries(Footballer.getFootballers());
+
     System.out.println("Die Summe aller geschossener Tore von Mittelfeldspielerinnen: "
-        + FootballerQueries.getTotalOfAllGoalsByMidfielders());
+        + queries.getTotalOfAllGoalsByMidfielders());
     System.out.println();
 
     System.out.print("Der Name der Spielerin vom VfL Wolfsburg mit den meisten Spielen: ");
-    FootballerQueries.getNameOfVfLWolfsburgFootballerWithMostPlayedGames()
-        .ifPresentOrElse(f -> System.out.println(f.name()), () -> System.out.println("-"));
+    queries.getNameOfVfLWolfsburgFootballerWithMostPlayedGames()
+        .ifPresentOrElse(System.out::println, () -> System.out.println("-"));
     System.out.println();
 
     System.out.println("Die Namen aller Vereine: ");
-    FootballerQueries.getNameOfAllFootballClubs()
-        .forEach(c -> System.out.println(c.name()));
+    queries.getAllFootballClubs().forEach(System.out::println);
     System.out.println();
 
     System.out.println(
         "Die Antwort auf die Frage, ob es eine Spielerin gibt, die kleiner als 170cm ist und mindestens ein Tor geschossen hat: "
-            + (FootballerQueries.isFootballerWithSizeInCmLT170AndNumbreOfGoalsBT0() ? "ja"
-                : "nein"));
+            + (queries.isFootballerWithSizeInCmLT170AndNumbreOfGoalsBT0() ? "ja" : "nein"));
     System.out.println();
 
     System.out.println("Alle Spielerinnen gruppiert nach ihrem Geburtsjahr: ");
-    FootballerQueries.getAllFootballersByBirthyear()
-        .forEach((y, fs) -> System.out.println(y + ": " + fs));
+    queries.getAllFootballersByBirthyear().forEach((y, fs) -> System.out.println(y + ": " + fs));
     System.out.println();
 
     System.out.print(
         "Die durchschnittliche Punktzahl aller Bundesligamannschaften in der Ewigen Tabelle: ");
-    FootballerQueries.getAverageNumberOfPointsFromAllBundesligaFootballClubs()
+    queries.getAverageNumberOfPointsFromAllBundesligaFootballClubs()
         .ifPresentOrElse(System.out::println, () -> System.out.println("-"));
     System.out.println();
+
   }
 
 }

@@ -9,18 +9,18 @@ package jappuccini.model;
  */
 public record Person(String name) {
 
-  // private String name;
-  /* version 1.0: private String name; */
+  // private final String name;
+  /* version 1.0: private final String name; */
 
   // public Person(String name) {
   // this.name = name;
   // }
   /* version 1.0: public Person(String name) { this.name = name; } */
 
-  // public String getName() {
+  // public String name() {
   // return name;
   // }
-  /* version 1.0: public String getName() { return name; } */
+  /* version 1.0: public String name() { return name; } */
 
 }
 /* version 1.0: public class Person {...} */

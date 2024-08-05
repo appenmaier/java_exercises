@@ -1,8 +1,10 @@
 package jappuccini.model;
 
+import java.util.Objects;
+
 /**
  * Koordinate
- * 
+ *
  * @author Daniel Appenmaier
  * @version 1.0
  *
@@ -18,8 +20,23 @@ public class Coordinate implements Comparable<Coordinate> {
   }
 
   @Override
-  public int compareTo(Coordinate o) {
-    return Double.valueOf(this.getDistanceToOriginPoint()).compareTo(o.getDistanceToOriginPoint());
+  public int compareTo(Coordinate other) {
+    return Double.compare(getDistanceToOriginPoint(), other.getDistanceToOriginPoint());
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) {
+      return true;
+    }
+    if (obj == null) {
+      return false;
+    }
+    if (getClass() != obj.getClass()) {
+      return false;
+    }
+    Coordinate other = (Coordinate) obj;
+    return x == other.x && y == other.y;
   }
 
   public double getDistanceToOriginPoint() {
@@ -32,6 +49,11 @@ public class Coordinate implements Comparable<Coordinate> {
 
   public int getY() {
     return y;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(x, y);
   }
 
   @Override

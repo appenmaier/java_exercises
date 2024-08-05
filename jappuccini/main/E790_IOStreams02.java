@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import jappuccini.model.Student;
 
@@ -20,7 +21,7 @@ import jappuccini.model.Student;
 public class E790_IOStreams02 {
 
   private static File file;
-  private static ArrayList<Student> students;
+  private static List<Student> students;
 
   @SuppressWarnings("resource")
   public static void main(String[] args) throws IOException {

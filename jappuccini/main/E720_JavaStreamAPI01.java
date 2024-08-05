@@ -1,12 +1,8 @@
 package jappuccini.main;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.OptionalDouble;
-import jappuccini.model.VideoGameConsoleQueries;
-import jappuccini.model.VideoGameConsoles.Maker;
-import jappuccini.model.VideoGameConsoles.VideoGameConsole;
+import jappuccini.model.Console;
+import jappuccini.model.ConsoleQueries;
 
 /**
  * JavaStreamAPI01
@@ -19,43 +15,37 @@ public class E720_JavaStreamAPI01 {
 
   public static void main(String[] args) {
 
-    VideoGameConsoleQueries.getAllCurrentConsoleNames().forEach(System.out::println);
+    ConsoleQueries queries = new ConsoleQueries(Console.getConsoles());
+
+    queries.getAllCurrentConsoleNames().forEach(System.out::println);
     System.out.println();
 
-    VideoGameConsoleQueries.getAllConsolesSortedByLifespan().forEach(System.out::println);
+    queries.getAllConsolesSortedByLifespan().forEach(System.out::println);
     System.out.println();
 
-    System.out.println(VideoGameConsoleQueries.isAnyConsoleWithMoreThan150MillionSoldUnits());
+    System.out.println(queries.isAnyConsoleWithMoreThan150MillionSoldUnits());
     System.out.println();
 
-    System.out.println(VideoGameConsoleQueries.isAllConsolesWithMoreThan50MillionSoldUnits());
+    System.out.println(queries.isAllConsolesWithMoreThan50MillionSoldUnits());
     System.out.println();
 
-    System.out.println(VideoGameConsoleQueries.getNumberOfConsolesFromNintendo());
+    System.out.println(queries.getNumberOfConsolesFromNintendo());
     System.out.println();
 
-    VideoGameConsoleQueries.getSoldUnitsInMillionsPerYearFromAllOutdatedConsoles()
-        .forEach(System.out::println);
+    queries.getSoldUnitsInMillionsPerYearFromAllOutdatedConsoles().forEach(System.out::println);
     System.out.println();
 
     OptionalDouble averageSoldUnitsInMillionsPerYearFromAllOutdatedConsoles =
-        VideoGameConsoleQueries.getAverageSoldUnitsInMillionsPerYearFromAllOutdatedConsoles();
+        queries.getAverageSoldUnitsInMillionsPerYearFromAllOutdatedConsoles();
     averageSoldUnitsInMillionsPerYearFromAllOutdatedConsoles.ifPresentOrElse(System.out::println,
         () -> System.out.println("Der Wert konnte nicht berechnet werden"));
     System.out.println();
 
-    Map<Maker, List<VideoGameConsole>> allConsolesByMaker =
-        VideoGameConsoleQueries.getAllConsolesByMaker();
-    for (Entry<Maker, List<VideoGameConsole>> entry : allConsolesByMaker.entrySet()) {
-      System.out.println(entry.getKey() + ": " + entry.getValue());
-    }
+    queries.getAllConsolesByMaker().forEach((m, cs) -> System.out.println(m + ": " + cs));
     System.out.println();
 
-    Map<Maker, Double> totalSoldUnitsInMillionsPerMaker =
-        VideoGameConsoleQueries.getTotalSoldUnitsInMillionsPerMaker();
-    for (Entry<Maker, Double> entry : totalSoldUnitsInMillionsPerMaker.entrySet()) {
-      System.out.println(entry.getKey() + ": " + entry.getValue());
-    }
+    queries.getTotalSoldUnitsInMillionsPerMaker()
+        .forEach((m, t) -> System.out.println(m + ": " + t));
 
   }
 

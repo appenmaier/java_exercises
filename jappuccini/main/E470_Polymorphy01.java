@@ -27,9 +27,9 @@ public class E470_Polymorphy01 {
     numberOfVehicles = Vehicle.getNumberOfVehicles();
     System.out.println("Anzahl Fahrzeuge: " + numberOfVehicles);
 
-    car1.print();
-    truck1.print();
-    car2.print();
+    System.out.println(car1);
+    System.out.println(truck1);
+    System.out.println(car2);
 
     /* version 1.0: car1.accelerate(50); */
     truck1.transform();

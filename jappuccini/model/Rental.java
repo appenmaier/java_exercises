@@ -11,8 +11,8 @@ import java.util.ArrayList;
  */
 public class Rental implements Partner {
 
-  private String name;
-  private ArrayList<Vehicle> vehicles;
+  private final String name;
+  private final ArrayList<Vehicle> vehicles;
 
   public Rental(String name) {
     this.name = name;
@@ -42,12 +42,8 @@ public class Rental implements Partner {
   /* version 3.0: - */
 
   @Override
-  public void print() {
-    System.out.println(name);
-    System.out.println("Unsere Fahrzeuge: ");
-    for (Vehicle v : vehicles) {
-      v.print();
-    }
+  public String toString() {
+    return "Rental [name=" + name + ", vehicles=" + vehicles + "]";
   }
 
   public void transformAllTrucks() {

@@ -9,7 +9,7 @@ package jappuccini.model;
  */
 public final class Truck extends Vehicle {
 
-  private int cargo;
+  private final int cargo;
   private boolean isTransformed;
 
   public Truck(String make, String model, Engine engine, int cargo) {
@@ -26,9 +26,8 @@ public final class Truck extends Vehicle {
   }
 
   @Override
-  public void print() {
-    System.out.println(
-        getMake() + " " + getModel() + "(" + getEngine().getDescription() + ", " + cargo + "t)");
+  public String toString() {
+    return "Truck [cargo=" + cargo + ", isTransformed=" + isTransformed + "]";
   }
 
   public void transform() {
