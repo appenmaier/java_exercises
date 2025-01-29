@@ -11,14 +11,14 @@ import tutego.model.Firebox;
  */
 public class E570T_I6_166 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    Firebox firebox = new Firebox();
-    System.out.println("isOn: " + firebox.isOn());
+      Firebox firebox = new Firebox();
+      System.out.println("isOn: " + firebox.isOn());
 
-    firebox.off();
-    System.out.println("isOn: " + firebox.isOn());
+      firebox.off();
+      System.out.println("isOn: " + firebox.isOn());
 
-  }
+   }
 
 }

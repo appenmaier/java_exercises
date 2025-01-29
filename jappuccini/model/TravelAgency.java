@@ -11,21 +11,21 @@ import java.util.ArrayList;
  */
 public class TravelAgency {
 
-  private final String name;
-  private ArrayList<Partner> partners;
+   private final String name;
+   private ArrayList<Partner> partners;
 
-  public TravelAgency(String name) {
-    this.name = name;
-    partners = new ArrayList<>();
-  }
+   public TravelAgency(String name) {
+      this.name = name;
+      partners = new ArrayList<>();
+   }
 
-  public void addPartner(Partner partner) {
-    partners.add(partner);
-  }
+   public void addPartner(Partner partner) {
+      partners.add(partner);
+   }
 
-  @Override
-  public String toString() {
-    return "TravelAgency [name=" + name + ", partners=" + partners + "]";
-  }
+   @Override
+   public String toString() {
+      return "TravelAgency [name=" + name + ", partners=" + partners + "]";
+   }
 
 }

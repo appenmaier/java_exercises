@@ -11,26 +11,26 @@ import tutego.model.Radio;
  */
 public class E420T_I6_121 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    Radio radio = new Radio();
+      Radio radio = new Radio();
 
-    System.out.println(radio.toString());
+      System.out.println(radio.toString());
 
-    radio.on();
-    radio.volumeUp();
-    radio.volumeUp();
-    radio.volumeUp();
-    double frequency = Radio.senderToFrequency("DASDING");
-    radio.setFrequency(frequency);
+      radio.on();
+      radio.volumeUp();
+      radio.volumeUp();
+      radio.volumeUp();
+      double frequency = Radio.senderToFrequency("DASDING");
+      radio.setFrequency(frequency);
 
-    System.out.println(radio.toString());
+      System.out.println(radio.toString());
 
-    radio.volumeDown();
-    radio.off();
+      radio.volumeDown();
+      radio.off();
 
-    System.out.println(radio.toString());
+      System.out.println(radio.toString());
 
-  }
+   }
 
 }

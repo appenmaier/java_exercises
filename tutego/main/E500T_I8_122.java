@@ -11,11 +11,11 @@ import tutego.model.CandyType;
  */
 public class E500T_I8_122 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    CandyType candyType = CandyType.random();
-    System.out.println("candyType: " + candyType);
+      CandyType candyType = CandyType.random();
+      System.out.println("candyType: " + candyType);
 
-  }
+   }
 
 }

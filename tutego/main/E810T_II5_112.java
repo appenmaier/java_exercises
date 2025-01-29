@@ -13,17 +13,17 @@ import java.util.stream.Collectors;
  */
 public class E810T_II5_112 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    String[] names = {"Anne", "Captain CiaoCiao", "Balico", "Charles", "Anne", "CiaoCiao",
-        "CiaoCiao", "Drake", "Anne", "Balico", "CiaoCiao"};
+      String[] names = {"Anne", "Captain CiaoCiao", "Balico", "Charles", "Anne", "CiaoCiao",
+            "CiaoCiao", "Drake", "Anne", "Balico", "CiaoCiao"};
 
-    Map<String, Long> votes =
-        Arrays.stream(names).map(t -> t.equals("Captain CiaoCiao") ? "CiaoCiao" : t)
+      Map<String, Long> votes = Arrays.stream(names)
+            .map(t -> t.equals("Captain CiaoCiao") ? "CiaoCiao" : t)
             .collect(Collectors.groupingBy(String::toLowerCase, Collectors.counting()));
 
-    System.out.println(votes);
+      System.out.println(votes);
 
-  }
+   }
 
 }

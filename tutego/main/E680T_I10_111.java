@@ -11,11 +11,11 @@ import tutego.model.Radio;
  */
 public class E680T_I10_111 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    Radio radio = new Radio();
-    radio.setModulation(Radio.Modulation.AM);
+      Radio radio = new Radio();
+      radio.setModulation(Radio.Modulation.AM);
 
-  }
+   }
 
 }

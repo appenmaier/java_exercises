@@ -1,6 +1,7 @@
 package tutego.model;
 
 import java.util.Comparator;
+
 import tutego.model.Heroes.Hero;
 
 /**
@@ -12,9 +13,9 @@ import tutego.model.Heroes.Hero;
  */
 public class HeroByNameComparator implements Comparator<Hero> {
 
-  @Override
-  public int compare(Hero o1, Hero o2) {
-    return o1.name.compareTo(o2.name);
-  }
+   @Override
+   public int compare(Hero o1, Hero o2) {
+      return o1.name.compareTo(o2.name);
+   }
 
 }

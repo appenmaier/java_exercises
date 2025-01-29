@@ -1,6 +1,7 @@
 package tutego.main;
 
 import java.util.Scanner;
+
 import tutego.model.Printer;
 
 /**
@@ -12,16 +13,16 @@ import tutego.model.Printer;
  */
 public class E180T_I2_158 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    @SuppressWarnings("resource")
-    Scanner sc = new Scanner(System.in);
+      @SuppressWarnings("resource")
+      Scanner sc = new Scanner(System.in);
 
-    System.out.print("Gib bitte die Hoehe der Fahne ein: ");
-    int height = sc.nextInt();
+      System.out.print("Gib bitte die Hoehe der Fahne ein: ");
+      int height = sc.nextInt();
 
-    Printer.printBanner(height);
+      Printer.printBanner(height);
 
-  }
+   }
 
 }

@@ -9,55 +9,55 @@ package ntu.model;
  */
 public class Employee {
 
-  private String firstName;
-  private int id;
-  private String lastName;
-  private int salary;
+   private String firstName;
+   private int id;
+   private String lastName;
+   private int salary;
 
-  public Employee(int id, String firstName, String lastName, int salary) {
-    this.id = id;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.salary = salary;
-  }
+   public Employee(int id, String firstName, String lastName, int salary) {
+      this.id = id;
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.salary = salary;
+   }
 
-  public int getAnnualSalary() {
-    return salary * 12;
-  }
+   public int getAnnualSalary() {
+      return salary * 12;
+   }
 
-  public String getFirstName() {
-    return firstName;
-  }
+   public String getFirstName() {
+      return firstName;
+   }
 
-  public int getId() {
-    return id;
-  }
+   public int getId() {
+      return id;
+   }
 
-  public String getLastName() {
-    return lastName;
-  }
+   public String getLastName() {
+      return lastName;
+   }
 
-  public String getName() {
-    return firstName + " " + lastName;
-  }
+   public String getName() {
+      return firstName + " " + lastName;
+   }
 
-  public int getSalary() {
-    return salary;
-  }
+   public int getSalary() {
+      return salary;
+   }
 
-  public int raiseSalary(int percent) {
-    salary += salary * percent / 100;
-    return salary;
-  }
+   public int raiseSalary(int percent) {
+      salary += salary * percent / 100;
+      return salary;
+   }
 
-  public void setSalary(int salary) {
-    this.salary = salary;
-  }
+   public void setSalary(int salary) {
+      this.salary = salary;
+   }
 
-  @Override
-  public String toString() {
-    return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName
-        + ", salary=" + salary + "]";
-  }
+   @Override
+   public String toString() {
+      return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName
+            + ", salary=" + salary + "]";
+   }
 
 }

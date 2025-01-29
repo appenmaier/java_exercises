@@ -13,23 +13,23 @@ import java.util.Optional;
  */
 public record TelephoneBook(Map<Person, TelephoneNumber> entries) {
 
-  public void addEntry(Person person, TelephoneNumber telephoneNumber) {
-    entries.put(person, telephoneNumber);
-  }
+   public void addEntry(Person person, TelephoneNumber telephoneNumber) {
+      entries.put(person, telephoneNumber);
+   }
 
-  public Optional<TelephoneNumber> getTelephoneNumberByName(String name) {
-    for (Entry<Person, TelephoneNumber> entry : entries.entrySet()) {
-      if (entry.getKey().name().equals(name)) {
-        return Optional.ofNullable(entry.getValue());
+   public Optional<TelephoneNumber> getTelephoneNumberByName(String name) {
+      for (Entry<Person, TelephoneNumber> entry : entries.entrySet()) {
+         if (entry.getKey().name().equals(name)) {
+            return Optional.ofNullable(entry.getValue());
+         }
       }
-    }
-    return Optional.empty();
-    // return Optional.ofNullableNullable(entries.get(new Person(name)));
-  }
-  /*
-   * version 1.0: public TelephoneNumber getTelephoneNumberByName(String name) { for (Entry<Person,
-   * TelephoneNumber> entry : entries.entrySet()) { if (entry.getKey().name().equals(name)) { return
-   * entry.getValue(); } } return null; // return entries.get(new Person(name)); }
-   */
+      return Optional.empty();
+      // return Optional.ofNullableNullable(entries.get(new Person(name)));
+   }
+   /*
+    * version 1.0: public TelephoneNumber getTelephoneNumberByName(String name) { for (Entry<Person,
+    * TelephoneNumber> entry : entries.entrySet()) { if (entry.getKey().name().equals(name)) {
+    * return entry.getValue(); } } return null; // return entries.get(new Person(name)); }
+    */
 
 }

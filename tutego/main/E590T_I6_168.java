@@ -11,14 +11,14 @@ import tutego.model.TV;
  */
 public class E590T_I6_168 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    TV tv = new TV();
+      TV tv = new TV();
 
-    tv.on();
+      tv.on();
 
-    System.out.println(tv.toString());
+      System.out.println(tv.toString());
 
-  }
+   }
 
 }

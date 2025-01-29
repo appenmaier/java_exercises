@@ -9,35 +9,35 @@ package ntu.model;
  */
 public class Author {
 
-  private String email;
-  private char gender;
-  private String name;
+   private String email;
+   private char gender;
+   private String name;
 
-  public Author(String name, String email, char gender) {
-    this.name = name;
-    this.email = email;
-    this.gender = gender;
-  }
+   public Author(String name, String email, char gender) {
+      this.name = name;
+      this.email = email;
+      this.gender = gender;
+   }
 
-  public String getEmail() {
-    return email;
-  }
+   public String getEmail() {
+      return email;
+   }
 
-  public char getGender() {
-    return gender;
-  }
+   public char getGender() {
+      return gender;
+   }
 
-  public String getName() {
-    return name;
-  }
+   public String getName() {
+      return name;
+   }
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+   public void setEmail(String email) {
+      this.email = email;
+   }
 
-  @Override
-  public String toString() {
-    return "Author [email=" + email + ", gender=" + gender + ", name=" + name + "]";
-  }
+   @Override
+   public String toString() {
+      return "Author [email=" + email + ", gender=" + gender + ", name=" + name + "]";
+   }
 
 }

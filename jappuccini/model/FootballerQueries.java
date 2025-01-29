@@ -15,55 +15,55 @@ import java.util.stream.Collectors;
  */
 public record FootballerQueries(List<Footballer> footballers) {
 
-  public int getTotalOfAllGoalsByMidfielders() {
-    int totalGoals = footballers.stream()
-        .filter(f -> f.position().equals(Position.MIDFIELDER))
-        .mapToInt(f -> f.numberOfGoals())
-        .sum();
+   public int getTotalOfAllGoalsByMidfielders() {
+      int totalGoals = footballers.stream()
+            .filter(f -> f.position().equals(Position.MIDFIELDER))
+            .mapToInt(f -> f.numberOfGoals())
+            .sum();
 
-    return totalGoals;
-  }
+      return totalGoals;
+   }
 
-  public Optional<String> getNameOfVfLWolfsburgFootballerWithMostPlayedGames() {
-    Optional<String> name = footballers.stream()
-        .filter(f -> f.footballClub().equals(new FootballClub("VfL Wolfsburg", 3, 1145)))
-        .sorted((f1, f2) -> Integer.compare(f1.numberOfGames(), f2.numberOfGames()))
-        .map(Footballer::name)
-        .findAny();
+   public Optional<String> getNameOfVfLWolfsburgFootballerWithMostPlayedGames() {
+      Optional<String> name = footballers.stream()
+            .filter(f -> f.footballClub().equals(new FootballClub("VfL Wolfsburg", 3, 1145)))
+            .sorted((f1, f2) -> Integer.compare(f1.numberOfGames(), f2.numberOfGames()))
+            .map(Footballer::name)
+            .findAny();
 
-    return name;
-  }
+      return name;
+   }
 
-  public List<FootballClub> getAllFootballClubs() {
-    List<FootballClub> footballClubs =
-        footballers.stream().map(Footballer::footballClub).distinct().toList();
+   public List<FootballClub> getAllFootballClubs() {
+      List<FootballClub> footballClubs =
+            footballers.stream().map(Footballer::footballClub).distinct().toList();
 
-    return footballClubs;
-  }
+      return footballClubs;
+   }
 
-  public boolean isFootballerWithSizeInCmLT170AndNumbreOfGoalsBT0() {
-    boolean exists =
-        footballers.stream().anyMatch(f -> f.sizeInCm() < 170 && f.numberOfGoals() > 0);
+   public boolean isFootballerWithSizeInCmLT170AndNumbreOfGoalsBT0() {
+      boolean exists =
+            footballers.stream().anyMatch(f -> f.sizeInCm() < 170 && f.numberOfGoals() > 0);
 
-    return exists;
-  }
+      return exists;
+   }
 
-  public Map<Integer, List<Footballer>> getAllFootballersByBirthyear() {
-    Map<Integer, List<Footballer>> footballersByBirthyear =
-        footballers.stream().collect(Collectors.groupingBy(f -> f.birthdate().getYear()));
+   public Map<Integer, List<Footballer>> getAllFootballersByBirthyear() {
+      Map<Integer, List<Footballer>> footballersByBirthyear =
+            footballers.stream().collect(Collectors.groupingBy(f -> f.birthdate().getYear()));
 
-    return footballersByBirthyear;
-  }
+      return footballersByBirthyear;
+   }
 
-  public OptionalDouble getAverageNumberOfPointsFromAllBundesligaFootballClubs() {
-    OptionalDouble averageNumberOfPoints = footballers.stream()
-        .map(Footballer::footballClub)
-        .distinct()
-        .filter(fc -> fc.positionInAllTimeTable() != -1)
-        .mapToInt(FootballClub::pointsInAllTimeTable)
-        .average();
+   public OptionalDouble getAverageNumberOfPointsFromAllBundesligaFootballClubs() {
+      OptionalDouble averageNumberOfPoints = footballers.stream()
+            .map(Footballer::footballClub)
+            .distinct()
+            .filter(fc -> fc.positionInAllTimeTable() != -1)
+            .mapToInt(FootballClub::pointsInAllTimeTable)
+            .average();
 
-    return averageNumberOfPoints;
-  }
+      return averageNumberOfPoints;
+   }
 
 }

@@ -12,21 +12,21 @@ import jappuccini.model.BarrelOverflowException;
  */
 public class E560_Exceptions02 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    Barrel barrel = new Barrel(100);
+      Barrel barrel = new Barrel(100);
 
-    try {
-      barrel.addFluid(50);
-      System.out.println(barrel);
-      barrel.addFluid(51);
-      System.out.println(barrel);
-      barrel.addFluid(2);
-      System.out.println(barrel);
-    } catch (BarrelOverflowException e) {
-      System.err.println(e.getMessage());
-    }
+      try {
+         barrel.addFluid(50);
+         System.out.println(barrel);
+         barrel.addFluid(51);
+         System.out.println(barrel);
+         barrel.addFluid(2);
+         System.out.println(barrel);
+      } catch (BarrelOverflowException e) {
+         System.err.println(e.getMessage());
+      }
 
-  }
+   }
 
 }

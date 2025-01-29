@@ -12,29 +12,30 @@ import ntu.model.BookWithAuthor;
  */
 public class E100N_OOP21 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    Author ahTeck = new Author("Tan Ah Teck", "ahteck@nowhere.com", 'm');
-    System.out.println(ahTeck);
+      Author ahTeck = new Author("Tan Ah Teck", "ahteck@nowhere.com", 'm');
+      System.out.println(ahTeck);
 
-    BookWithAuthor dummyBook = new BookWithAuthor("Java for dummy", ahTeck, 19.95, 99);
-    System.out.println(dummyBook);
+      BookWithAuthor dummyBook = new BookWithAuthor("Java for dummy", ahTeck, 19.95, 99);
+      System.out.println(dummyBook);
 
-    dummyBook.setPrice(29.95);
-    dummyBook.setQty(28);
-    System.out.println("name is: " + dummyBook.getName());
-    System.out.println("price is: " + dummyBook.getPrice());
-    System.out.println("qty is: " + dummyBook.getQty());
-    System.out.println("Author is: " + dummyBook.getAuthor());
-    System.out.println("Author's name is: " + dummyBook.getAuthor().getName());
-    System.out.println("Author's email is: " + dummyBook.getAuthor().getEmail());
+      dummyBook.setPrice(29.95);
+      dummyBook.setQty(28);
+      System.out.println("name is: " + dummyBook.getName());
+      System.out.println("price is: " + dummyBook.getPrice());
+      System.out.println("qty is: " + dummyBook.getQty());
+      System.out.println("Author is: " + dummyBook.getAuthor());
+      System.out.println("Author's name is: " + dummyBook.getAuthor().getName());
+      System.out.println("Author's email is: " + dummyBook.getAuthor().getEmail());
 
-    BookWithAuthor anotherBook =
-        new BookWithAuthor("more Java", new Author("Paul Tan", "paul@somewhere.com", 'm'), 29.95);
-    System.out.println(anotherBook);
+      BookWithAuthor anotherBook = new BookWithAuthor("more Java",
+            new Author("Paul Tan", "paul@somewhere.com", 'm'),
+            29.95);
+      System.out.println(anotherBook);
 
-    System.out.println(anotherBook.getAuthorName());
+      System.out.println(anotherBook.getAuthorName());
 
-  }
+   }
 
 }

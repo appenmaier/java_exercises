@@ -11,13 +11,13 @@ import tutego.model.TV;
  */
 public class E470T_I6_151 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    TV tv = new TV();
+      TV tv = new TV();
 
-    tv.on();
-    tv.off();
+      tv.on();
+      tv.off();
 
-  }
+   }
 
 }

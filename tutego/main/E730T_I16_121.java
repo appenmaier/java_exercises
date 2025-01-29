@@ -2,6 +2,7 @@ package tutego.main;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import tutego.model.Heroes;
 import tutego.model.Heroes.Hero;
 
@@ -14,14 +15,14 @@ import tutego.model.Heroes.Hero;
  */
 public class E730T_I16_121 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    List<Hero> heroes = new ArrayList<>(Heroes.ALL);
+      List<Hero> heroes = new ArrayList<>(Heroes.ALL);
 
-    for (Hero h : heroes) {
-      System.out.println(h);
-    }
+      for (Hero h : heroes) {
+         System.out.println(h);
+      }
 
-  }
+   }
 
 }

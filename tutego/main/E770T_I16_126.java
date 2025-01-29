@@ -14,31 +14,32 @@ import java.util.List;
  */
 public class E770T_I16_126 {
 
-  record Store(String name, Point location) {
-  }
+   record Store(String name, Point location) {
+   }
 
-  public static List<Store> findStoresAround(Collection<Store> stores, Point center) {
-    List<Store> sortedStores = new ArrayList<>(stores);
-    sortedStores.sort((o1, o2) -> {
-      double distance1 = o1.location.distance(center);
-      double distance2 = o2.location.distance(center);
-      return Double.compare(distance1, distance2);
-    });
-    return sortedStores;
-  }
+   public static List<Store> findStoresAround(Collection<Store> stores, Point center) {
+      List<Store> sortedStores = new ArrayList<>(stores);
+      sortedStores.sort((o1, o2) -> {
+         double distance1 = o1.location.distance(center);
+         double distance2 = o2.location.distance(center);
+         return Double.compare(distance1, distance2);
+      });
+      return sortedStores;
+   }
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    List<Store> stores =
-        List.of(new Store("Aldi", new Point(2, 5)), new Store("Norma", new Point(4, 1)),
-            new Store("Lidl", new Point(3, 9)), new Store("Aldi", new Point(4, 7)));
-    stores.forEach(t -> System.out.println(t.name + ", " + t.location));
+      List<Store> stores = List.of(new Store("Aldi", new Point(2, 5)),
+            new Store("Norma", new Point(4, 1)),
+            new Store("Lidl", new Point(3, 9)),
+            new Store("Aldi", new Point(4, 7)));
+      stores.forEach(t -> System.out.println(t.name + ", " + t.location));
 
-    System.out.println();
+      System.out.println();
 
-    List<Store> sortedStores = findStoresAround(stores, new Point(5, 5));
-    sortedStores.forEach(t -> System.out.println(t.name + ", " + t.location));
+      List<Store> sortedStores = findStoresAround(stores, new Point(5, 5));
+      sortedStores.forEach(t -> System.out.println(t.name + ", " + t.location));
 
-  }
+   }
 
 }

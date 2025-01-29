@@ -11,10 +11,10 @@ import tutego.model.Printer;
  */
 public class E240T_I2_161 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    Printer.printLineOfHearts();
+      Printer.printLineOfHearts();
 
-  }
+   }
 
 }

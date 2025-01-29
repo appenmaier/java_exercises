@@ -9,52 +9,52 @@ package ntu.model;
  */
 public class Circle {
 
-  private String color;
-  private double radius;
+   private String color;
+   private double radius;
 
-  public Circle() {
-    radius = 1.0;
-    color = "red";
-  }
+   public Circle() {
+      radius = 1.0;
+      color = "red";
+   }
 
-  public Circle(double radius) {
-    this.radius = radius;
-    color = "red";
-  }
+   public Circle(double radius) {
+      this.radius = radius;
+      color = "red";
+   }
 
-  public Circle(double radius, String color) {
-    this.radius = radius;
-    this.color = color;
-  }
+   public Circle(double radius, String color) {
+      this.radius = radius;
+      this.color = color;
+   }
 
-  public double getArea() {
-    return radius * radius * Math.PI;
-  }
+   public double getArea() {
+      return radius * radius * Math.PI;
+   }
 
-  public double getCircumference() {
-    return 2 * Math.PI * radius;
-  }
-  /* version 1.0: - */
+   public double getCircumference() {
+      return 2 * Math.PI * radius;
+   }
+   /* version 1.0: - */
 
-  public String getColor() {
-    return color;
-  }
+   public String getColor() {
+      return color;
+   }
 
-  public double getRadius() {
-    return radius;
-  }
+   public double getRadius() {
+      return radius;
+   }
 
-  public void setColor(String color) {
-    this.color = color;
-  }
+   public void setColor(String color) {
+      this.color = color;
+   }
 
-  public void setRadius(double radius) {
-    this.radius = radius;
-  }
+   public void setRadius(double radius) {
+      this.radius = radius;
+   }
 
-  @Override
-  public String toString() {
-    return "Circle [radius=" + radius + " color=" + color + "]";
-  }
+   @Override
+   public String toString() {
+      return "Circle [radius=" + radius + " color=" + color + "]";
+   }
 
 }

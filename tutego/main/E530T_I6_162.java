@@ -13,18 +13,18 @@ import tutego.model.Radio;
  */
 public class E530T_I6_162 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    Radio radio1 = new Radio();
-    Radio radio2 = new Radio();
-    IceMachine iceMachine = new IceMachine();
+      Radio radio1 = new Radio();
+      Radio radio2 = new Radio();
+      IceMachine iceMachine = new IceMachine();
 
-    radio1.on();
-    iceMachine.on();
+      radio1.on();
+      iceMachine.on();
 
-    int x = ElectronicDevice.numberOfElectronicDevicesSwitchedOn(radio1, iceMachine, radio2);
-    System.out.println("x: " + x);
+      int x = ElectronicDevice.numberOfElectronicDevicesSwitchedOn(radio1, iceMachine, radio2);
+      System.out.println("x: " + x);
 
-  }
+   }
 
 }

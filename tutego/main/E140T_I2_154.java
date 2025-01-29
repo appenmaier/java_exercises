@@ -9,19 +9,19 @@ package tutego.main;
  */
 public class E140T_I2_154 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    double t = Math.random() * 10;
+      double t = Math.random() * 10;
 
-    while (t > 0) {
-      if (t < 1) {
-        t *= 2;
-      } else {
-        t--;
+      while (t > 0) {
+         if (t < 1) {
+            t *= 2;
+         } else {
+            t--;
+         }
+         System.out.println(t);
       }
-      System.out.println(t);
-    }
 
-  }
+   }
 
 }

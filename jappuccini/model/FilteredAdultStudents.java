@@ -12,20 +12,20 @@ import java.util.List;
  */
 public class FilteredAdultStudents {
 
-  private final List<Student> students;
+   private final List<Student> students;
 
-  public FilteredAdultStudents() {
-    students = new ArrayList<>();
-  }
+   public FilteredAdultStudents() {
+      students = new ArrayList<>();
+   }
 
-  public void add(Student student) {
-    if (student.age() >= 18) {
-      students.add(student);
-    }
-  }
+   public void add(Student student) {
+      if (student.age() >= 18) {
+         students.add(student);
+      }
+   }
 
-  public void printStudents() {
-    students.forEach(System.out::println);
-  }
+   public void printStudents() {
+      students.forEach(System.out::println);
+   }
 
 }

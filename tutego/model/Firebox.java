@@ -9,18 +9,18 @@ package tutego.model;
  */
 public class Firebox extends ElectronicDevice {
 
-  public Firebox() {
-    on();
-  }
+   public Firebox() {
+      on();
+   }
 
-  @Override
-  public void off() {
+   @Override
+   public void off() {
 
-  }
+   }
 
-  @Override
-  public String toString() {
-    return "Feuermelder [ist an]";
-  }
+   @Override
+   public String toString() {
+      return "Feuermelder [ist an]";
+   }
 
 }

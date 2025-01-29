@@ -14,23 +14,23 @@ import tutego.model.TV;
  */
 public class E630T_I8_113 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    Ship ship = new Ship();
-    Radio radio1 = new Radio();
-    Radio radio2 = new Radio();
-    IceMachine iceMachine = new IceMachine();
-    TV tv = new TV();
+      Ship ship = new Ship();
+      Radio radio1 = new Radio();
+      Radio radio2 = new Radio();
+      IceMachine iceMachine = new IceMachine();
+      TV tv = new TV();
 
-    radio1.setWatt(15);
-    radio2.setWatt(10);
-    iceMachine.setWatt(150);
-    tv.setWatt(80);
+      radio1.setWatt(15);
+      radio2.setWatt(10);
+      iceMachine.setWatt(150);
+      tv.setWatt(80);
 
-    ship.addAllElectronicDevices(radio1, radio2, iceMachine, tv);
+      ship.addAllElectronicDevices(radio1, radio2, iceMachine, tv);
 
-    System.out.println(ship.toString());
+      System.out.println(ship.toString());
 
-  }
+   }
 
 }

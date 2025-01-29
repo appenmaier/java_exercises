@@ -9,16 +9,16 @@ package jappuccini.model;
  */
 public enum SkatCardColor {
 
-  DIAMONDS("Karo"), HEARTS("Herz"), SPADE("Pik"), CLUBS("Kreuz");
+   DIAMONDS("Karo"), HEARTS("Herz"), SPADE("Pik"), CLUBS("Kreuz");
 
-  private String description;
+   private String description;
 
-  SkatCardColor(String description) {
-    this.description = description;
-  }
+   SkatCardColor(String description) {
+      this.description = description;
+   }
 
-  public String getDescription() {
-    return description;
-  }
+   public String getDescription() {
+      return description;
+   }
 
 }

@@ -3,6 +3,7 @@ package jappuccini.main;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import jappuccini.model.Coordinate;
 import jappuccini.model.CoordinateByDistanceToOriginPointComparator;
 
@@ -15,19 +16,19 @@ import jappuccini.model.CoordinateByDistanceToOriginPointComparator;
  */
 public class E540_Comparators02 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    List<Coordinate> coordinates = new ArrayList<>();
-    coordinates.add(new Coordinate(6, 2));
-    coordinates.add(new Coordinate(1, 3));
-    coordinates.add(new Coordinate(4, 3));
-    coordinates.add(new Coordinate(3, 4));
+      List<Coordinate> coordinates = new ArrayList<>();
+      coordinates.add(new Coordinate(6, 2));
+      coordinates.add(new Coordinate(1, 3));
+      coordinates.add(new Coordinate(4, 3));
+      coordinates.add(new Coordinate(3, 4));
 
-    Collections.sort(coordinates, new CoordinateByDistanceToOriginPointComparator());
+      Collections.sort(coordinates, new CoordinateByDistanceToOriginPointComparator());
 
-    for (Coordinate c : coordinates) {
-      System.out.println(c);
-    }
-  }
+      for (Coordinate c : coordinates) {
+         System.out.println(c);
+      }
+   }
 
 }

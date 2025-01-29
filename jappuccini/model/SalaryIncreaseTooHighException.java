@@ -9,10 +9,10 @@ package jappuccini.model;
  */
 public class SalaryIncreaseTooHighException extends Exception {
 
-  private static final long serialVersionUID = 1L;
+   private static final long serialVersionUID = 1L;
 
-  public SalaryIncreaseTooHighException() {
-    super("Die Gehaltserhoehung ueberschreitet 10%");
-  }
+   public SalaryIncreaseTooHighException() {
+      super("Die Gehaltserhoehung ueberschreitet 10%");
+   }
 
 }

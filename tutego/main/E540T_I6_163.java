@@ -13,20 +13,20 @@ import tutego.model.Ship;
  */
 public class E540T_I6_163 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    Ship ship = new Ship();
-    Radio radio1 = new Radio();
-    Radio radio2 = new Radio();
-    IceMachine iceMachine = new IceMachine();
+      Ship ship = new Ship();
+      Radio radio1 = new Radio();
+      Radio radio2 = new Radio();
+      IceMachine iceMachine = new IceMachine();
 
-    radio1.on();
-    iceMachine.on();
+      radio1.on();
+      iceMachine.on();
 
-    ship.addAllElectronicDevices(radio1, radio2, iceMachine);
+      ship.addAllElectronicDevices(radio1, radio2, iceMachine);
 
-    System.out.println(ship.toString());
+      System.out.println(ship.toString());
 
-  }
+   }
 
 }

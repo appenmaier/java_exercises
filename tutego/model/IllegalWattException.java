@@ -9,10 +9,10 @@ package tutego.model;
  */
 public class IllegalWattException extends RuntimeException {
 
-  private static final long serialVersionUID = 1L;
+   private static final long serialVersionUID = 1L;
 
-  public IllegalWattException(String message) {
-    super(message);
-  }
+   public IllegalWattException(String message) {
+      super(message);
+   }
 
 }

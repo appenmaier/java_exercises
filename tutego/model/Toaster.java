@@ -11,24 +11,24 @@ import java.util.Objects;
  */
 public class Toaster {
 
-  private int capacity;
-  private boolean stainless;
-  private boolean extraLarge;
+   private int capacity;
+   private boolean stainless;
+   private boolean extraLarge;
 
-  @Override
-  public boolean equals(Object object) {
-    if (!(object instanceof Toaster)) {
-      return false;
-    }
-    Toaster toaster = (Toaster) object;
+   @Override
+   public boolean equals(Object object) {
+      if (!(object instanceof Toaster)) {
+         return false;
+      }
+      Toaster toaster = (Toaster) object;
 
-    return capacity == toaster.capacity && stainless == toaster.stainless
-        && extraLarge == toaster.extraLarge;
-  }
+      return capacity == toaster.capacity && stainless == toaster.stainless
+            && extraLarge == toaster.extraLarge;
+   }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(capacity, stainless, extraLarge);
-  }
+   @Override
+   public int hashCode() {
+      return Objects.hash(capacity, stainless, extraLarge);
+   }
 
 }

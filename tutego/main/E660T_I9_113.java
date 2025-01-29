@@ -11,28 +11,28 @@ import java.util.Arrays;
  */
 public class E660T_I9_113 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    String[] strings = {"1", "234", "333"};
-    System.out.println(Arrays.toString(parseInts(strings)));
-    System.out.println(Arrays.toString(parseInts("1", "234", "333")));
-    System.out.println(Arrays.toString(parseInts("1", "ll234", "3", null, "99")));
-    System.out.println(Arrays.toString(parseInts("Person", "Woman", "Man", "Camera, TV")));
+      String[] strings = {"1", "234", "333"};
+      System.out.println(Arrays.toString(parseInts(strings)));
+      System.out.println(Arrays.toString(parseInts("1", "234", "333")));
+      System.out.println(Arrays.toString(parseInts("1", "ll234", "3", null, "99")));
+      System.out.println(Arrays.toString(parseInts("Person", "Woman", "Man", "Camera, TV")));
 
-  }
+   }
 
-  public static int[] parseInts(String... numbers) {
-    int[] convertedNumbers = new int[numbers.length];
-    for (int i = 0; i < numbers.length; i++) {
-      int number;
-      try {
-        number = Integer.parseInt(numbers[i]);
-      } catch (NumberFormatException e) {
-        number = 0;
+   public static int[] parseInts(String... numbers) {
+      int[] convertedNumbers = new int[numbers.length];
+      for (int i = 0; i < numbers.length; i++) {
+         int number;
+         try {
+            number = Integer.parseInt(numbers[i]);
+         } catch (NumberFormatException e) {
+            number = 0;
+         }
+         convertedNumbers[i] = number;
       }
-      convertedNumbers[i] = number;
-    }
-    return convertedNumbers;
-  }
+      return convertedNumbers;
+   }
 
 }

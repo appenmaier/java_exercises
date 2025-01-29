@@ -1,6 +1,7 @@
 package tutego.main;
 
 import java.util.Scanner;
+
 import tutego.model.CoinMachine;
 
 /**
@@ -12,16 +13,16 @@ import tutego.model.CoinMachine;
  */
 public class E060T_I2_134 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    @SuppressWarnings("resource")
-    Scanner sc = new Scanner(System.in);
+      @SuppressWarnings("resource")
+      Scanner sc = new Scanner(System.in);
 
-    System.out.print("Gib bitte den Betrag in Liretta ein: ");
-    double amount = sc.nextDouble();
+      System.out.print("Gib bitte den Betrag in Liretta ein: ");
+      double amount = sc.nextDouble();
 
-    CoinMachine.printCoins(amount);
+      CoinMachine.printCoins(amount);
 
-  }
+   }
 
 }

@@ -1,6 +1,7 @@
 package tutego.main;
 
 import java.util.Scanner;
+
 import tutego.model.Printer;
 
 /**
@@ -12,16 +13,16 @@ import tutego.model.Printer;
  */
 public class E210T_I2_1511 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    @SuppressWarnings("resource")
-    Scanner sc = new Scanner(System.in);
+      @SuppressWarnings("resource")
+      Scanner sc = new Scanner(System.in);
 
-    System.out.print("Gib bitte die Anzahl Wiederholungen ein: ");
-    int repetitions = sc.nextInt();
+      System.out.print("Gib bitte die Anzahl Wiederholungen ein: ");
+      int repetitions = sc.nextInt();
 
-    Printer.printFishPattern(repetitions);
+      Printer.printFishPattern(repetitions);
 
-  }
+   }
 
 }

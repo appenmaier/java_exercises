@@ -9,8 +9,9 @@ package tutego.model;
  */
 public class IceMachine extends ElectronicDevice {
 
-  public String toString() {
-    return "Eismaschine [" + (isOn() ? "ist an]" : "ist aus]");
-  }
+   @Override
+   public String toString() {
+      return "Eismaschine [" + (isOn() ? "ist an]" : "ist aus]");
+   }
 
 }

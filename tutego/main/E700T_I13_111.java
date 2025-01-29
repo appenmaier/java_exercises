@@ -16,19 +16,19 @@ import java.util.function.Supplier;
  */
 public class E700T_I13_111 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    @SuppressWarnings("unused")
-    Runnable runnable = () -> System.out.println("Runnable");
-    @SuppressWarnings("unused")
-    ActionListener listener = e -> System.out.println("ActionListener");
-    @SuppressWarnings("unused")
-    Supplier<String> supplier = () -> "Supplier";
-    @SuppressWarnings("unused")
-    Consumer<Point> point = t -> System.out.println("Consumer");
-    @SuppressWarnings("unused")
-    Comparator<Rectangle> comparator = (o1, o2) -> o1.hashCode() - o2.hashCode();
+      @SuppressWarnings("unused")
+      Runnable runnable = () -> System.out.println("Runnable");
+      @SuppressWarnings("unused")
+      ActionListener listener = e -> System.out.println("ActionListener");
+      @SuppressWarnings("unused")
+      Supplier<String> supplier = () -> "Supplier";
+      @SuppressWarnings("unused")
+      Consumer<Point> point = t -> System.out.println("Consumer");
+      @SuppressWarnings("unused")
+      Comparator<Rectangle> comparator = (o1, o2) -> o1.hashCode() - o2.hashCode();
 
-  }
+   }
 
 }

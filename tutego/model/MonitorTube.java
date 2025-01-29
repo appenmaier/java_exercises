@@ -9,12 +9,12 @@ package tutego.model;
  */
 public class MonitorTube {
 
-  public void off() {
-    System.out.println("Bildroehre aus");
-  }
+   public void off() {
+      System.out.println("Bildroehre aus");
+   }
 
-  public void on() {
-    System.out.println("Bildroehre an");
-  }
+   public void on() {
+      System.out.println("Bildroehre an");
+   }
 
 }

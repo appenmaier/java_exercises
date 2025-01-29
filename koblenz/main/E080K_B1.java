@@ -11,28 +11,28 @@ import java.util.Scanner;
  */
 public class E080K_B1 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    @SuppressWarnings("resource")
-    Scanner scanner = new Scanner(System.in);
+      @SuppressWarnings("resource")
+      Scanner scanner = new Scanner(System.in);
 
-    System.out.print("Gib bitte einen Wert fuer a ein: ");
-    int a = scanner.nextInt();
+      System.out.print("Gib bitte einen Wert fuer a ein: ");
+      int a = scanner.nextInt();
 
-    System.out.print("Gib bitte einen Wert fuer b ein: ");
-    int b = scanner.nextInt();
+      System.out.print("Gib bitte einen Wert fuer b ein: ");
+      int b = scanner.nextInt();
 
-    int tmp;
+      int tmp;
 
-    if (a > b) {
-      tmp = b;
-      b = a;
-      a = tmp;
-    }
+      if (a > b) {
+         tmp = b;
+         b = a;
+         a = tmp;
+      }
 
-    System.out.println("kleinere Zahl: " + a);
-    System.out.println("groessere Zahl: " + b);
+      System.out.println("kleinere Zahl: " + a);
+      System.out.println("groessere Zahl: " + b);
 
-  }
+   }
 
 }

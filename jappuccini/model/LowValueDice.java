@@ -11,14 +11,14 @@ import java.util.Random;
  */
 public class LowValueDice extends Dice {
 
-  public LowValueDice(int id) {
-    super(id);
-  }
+   public LowValueDice(int id) {
+      super(id);
+   }
 
-  @Override
-  public void rollTheDice() {
-    Random random = new Random();
-    value = random.nextInt(3) + 1;
-  }
+   @Override
+   public void rollTheDice() {
+      Random random = new Random();
+      value = random.nextInt(3) + 1;
+   }
 
 }

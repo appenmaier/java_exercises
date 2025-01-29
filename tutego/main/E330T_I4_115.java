@@ -13,51 +13,51 @@ import java.util.Random;
  */
 public class E330T_I4_115 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    int size = 5;
-    int xMax = 10;
-    int yMax = 10;
+      int size = 5;
+      int xMax = 10;
+      int yMax = 10;
 
-    Random rnd = new Random();
+      Random rnd = new Random();
 
-    Point[] points = new Point[size];
+      Point[] points = new Point[size];
 
-    for (int i = 0; i < size; i++) {
-      int x = rnd.nextInt(xMax);
-      int y = rnd.nextInt(yMax);
-      points[i] = new Point(x, y);
-    }
-
-    System.out.println(Arrays.toString(points));
-
-    double minDistance = minDistance(points, size);
-    System.out.println("minDistance " + minDistance);
-    Point minDistancePoint = minDistancePoint(points, size);
-    System.out.println("minDistancePoint " + minDistancePoint);
-
-  }
-
-  public static double minDistance(Point[] points, int size) {
-    double minDistance = points[0].distance(0, 0);
-    for (int i = 0; i < size; i++) {
-      if (points[i].distance(0, 0) < minDistance) {
-        minDistance = points[i].distance(0, 0);
+      for (int i = 0; i < size; i++) {
+         int x = rnd.nextInt(xMax);
+         int y = rnd.nextInt(yMax);
+         points[i] = new Point(x, y);
       }
-    }
-    return minDistance;
-  }
 
-  public static Point minDistancePoint(Point[] points, int size) {
-    double minDistance = points[0].distance(0, 0);
-    Point minDistancePoint = points[0];
-    for (int i = 0; i < size; i++) {
-      if (points[i].distance(0, 0) < minDistance) {
-        minDistance = points[i].distance(0, 0);
-        minDistancePoint = points[i];
+      System.out.println(Arrays.toString(points));
+
+      double minDistance = minDistance(points, size);
+      System.out.println("minDistance " + minDistance);
+      Point minDistancePoint = minDistancePoint(points, size);
+      System.out.println("minDistancePoint " + minDistancePoint);
+
+   }
+
+   public static double minDistance(Point[] points, int size) {
+      double minDistance = points[0].distance(0, 0);
+      for (int i = 0; i < size; i++) {
+         if (points[i].distance(0, 0) < minDistance) {
+            minDistance = points[i].distance(0, 0);
+         }
       }
-    }
-    return minDistancePoint;
-  }
+      return minDistance;
+   }
+
+   public static Point minDistancePoint(Point[] points, int size) {
+      double minDistance = points[0].distance(0, 0);
+      Point minDistancePoint = points[0];
+      for (int i = 0; i < size; i++) {
+         if (points[i].distance(0, 0) < minDistance) {
+            minDistance = points[i].distance(0, 0);
+            minDistancePoint = points[i];
+         }
+      }
+      return minDistancePoint;
+   }
 
 }

@@ -9,10 +9,10 @@ package jappuccini.main;
  */
 public class E010_ClassStructure01 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    System.out.println("Hello World");
+      System.out.println("Hello World");
 
-  }
+   }
 
 }

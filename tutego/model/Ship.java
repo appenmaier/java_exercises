@@ -12,80 +12,80 @@ import java.util.Collections;
  */
 public class Ship {
 
-  public final static int MAXIMUM_POWER_CONSUMPTION = 100;
+   public final static int MAXIMUM_POWER_CONSUMPTION = 100;
 
-  private ArrayList<ElectronicDevice> electronicDevices;
+   private ArrayList<ElectronicDevice> electronicDevices;
 
-  public Ship() {
-    electronicDevices = new ArrayList<>();
-  }
+   public Ship() {
+      electronicDevices = new ArrayList<>();
+   }
 
-  public void addAllElectronicDevices(ElectronicDevice... electronicDevices) {
-    for (ElectronicDevice e : electronicDevices) {
-      addElectronicDevice(e);
-    }
-  }
-
-  public void addAndCheckAllElectronicDevices(ElectronicDevice... electronicDevices) {
-    for (ElectronicDevice e : electronicDevices) {
-      addAndCheckElectronicDevice(e);
-    }
-  }
-
-  public void addAndCheckElectronicDevice(ElectronicDevice electronicDevice) {
-    if (electronicDevice instanceof Radio) {
-      Radio radio = (Radio) electronicDevice;
-      if (radio.getVolume() == 0) {
-        return;
+   public void addAllElectronicDevices(ElectronicDevice... electronicDevices) {
+      for (ElectronicDevice e : electronicDevices) {
+         addElectronicDevice(e);
       }
-    }
+   }
 
-    addElectronicDevice(electronicDevice);
-    System.out.println("GEZ-Gebuehren nicht vergessen");
-  }
-
-  public void addElectronicDevice(ElectronicDevice electronicDevice) {
-    electronicDevices.add(electronicDevice);
-    Collections.sort(electronicDevices, new ElectronicDeviceWattComparator());
-  }
-
-  public ElectronicDevice findMostPowerConsumingElectronicDevice() {
-    return Collections.max(electronicDevices, new ElectronicDeviceWattComparator());
-  }
-
-  public void holiday() {
-    for (ElectronicDevice e : electronicDevices) {
-      e.off();
-    }
-  }
-
-  public int numberOfElectronicDevicesSwitchedOn() {
-    int count = 0;
-
-    for (ElectronicDevice e : electronicDevices) {
-      if (e.isOn()) {
-        count++;
+   public void addAndCheckAllElectronicDevices(ElectronicDevice... electronicDevices) {
+      for (ElectronicDevice e : electronicDevices) {
+         addAndCheckElectronicDevice(e);
       }
-    }
+   }
 
-    return count;
-  }
+   public void addAndCheckElectronicDevice(ElectronicDevice electronicDevice) {
+      if (electronicDevice instanceof Radio) {
+         Radio radio = (Radio) electronicDevice;
+         if (radio.getVolume() == 0) {
+            return;
+         }
+      }
 
-  public void removePowerConsumingElectronicDevices() {
-    MaximumPowerConsumptionOfElectronicDevicePredicate predicate =
-        new MaximumPowerConsumptionOfElectronicDevicePredicate(MAXIMUM_POWER_CONSUMPTION);
+      addElectronicDevice(electronicDevice);
+      System.out.println("GEZ-Gebuehren nicht vergessen");
+   }
 
-    electronicDevices.removeIf(predicate);
-  }
+   public void addElectronicDevice(ElectronicDevice electronicDevice) {
+      electronicDevices.add(electronicDevice);
+      Collections.sort(electronicDevices, new ElectronicDeviceWattComparator());
+   }
 
-  @Override
-  public String toString() {
-    String text = "";
-    for (ElectronicDevice e : electronicDevices) {
-      text += e.toString() + "\n";
-    }
-    text += "Anzahl eingeschalteter Geraete: " + numberOfElectronicDevicesSwitchedOn() + "\n";
-    return text;
-  }
+   public ElectronicDevice findMostPowerConsumingElectronicDevice() {
+      return Collections.max(electronicDevices, new ElectronicDeviceWattComparator());
+   }
+
+   public void holiday() {
+      for (ElectronicDevice e : electronicDevices) {
+         e.off();
+      }
+   }
+
+   public int numberOfElectronicDevicesSwitchedOn() {
+      int count = 0;
+
+      for (ElectronicDevice e : electronicDevices) {
+         if (e.isOn()) {
+            count++;
+         }
+      }
+
+      return count;
+   }
+
+   public void removePowerConsumingElectronicDevices() {
+      MaximumPowerConsumptionOfElectronicDevicePredicate predicate =
+            new MaximumPowerConsumptionOfElectronicDevicePredicate(MAXIMUM_POWER_CONSUMPTION);
+
+      electronicDevices.removeIf(predicate);
+   }
+
+   @Override
+   public String toString() {
+      String text = "";
+      for (ElectronicDevice e : electronicDevices) {
+         text += e.toString() + "\n";
+      }
+      text += "Anzahl eingeschalteter Geraete: " + numberOfElectronicDevicesSwitchedOn() + "\n";
+      return text;
+   }
 
 }

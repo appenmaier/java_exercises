@@ -9,10 +9,10 @@ package jappuccini.model;
  */
 public class BarrelOverflowException extends Exception {
 
-  private static final long serialVersionUID = 1L;
+   private static final long serialVersionUID = 1L;
 
-  public BarrelOverflowException() {
-    super("Das war der Tropfen, der das Fass zum Ueberlaufen gebracht hat");
-  }
+   public BarrelOverflowException() {
+      super("Das war der Tropfen, der das Fass zum Ueberlaufen gebracht hat");
+   }
 
 }

@@ -11,42 +11,42 @@ import java.util.Arrays;
  */
 public class E340T_I4_116 {
 
-  public static int findSplitPoint(int[] array) {
-    int totalLeft = 0;
-    int totalRight = 0;
-    for (int i = 0; i < array.length; i++) {
-      totalRight += array[i];
-    }
-
-    for (int i = 0; i < array.length - 1; i++) {
-      totalLeft += array[i];
-      totalRight -= array[i];
-      System.out.println(i + ": " + totalLeft + " - " + totalRight);
-      if (relativeDifference(totalLeft, totalRight) <= 10) {
-        return i;
+   public static int findSplitPoint(int[] array) {
+      int totalLeft = 0;
+      int totalRight = 0;
+      for (int i = 0; i < array.length; i++) {
+         totalRight += array[i];
       }
-    }
 
-    return -1;
-  }
+      for (int i = 0; i < array.length - 1; i++) {
+         totalLeft += array[i];
+         totalRight -= array[i];
+         System.out.println(i + ": " + totalLeft + " - " + totalRight);
+         if (relativeDifference(totalLeft, totalRight) <= 10) {
+            return i;
+         }
+      }
 
-  public static void main(String[] args) {
+      return -1;
+   }
 
-    int[] values = {10, 20, 30, 40, 40, 50};
+   public static void main(String[] args) {
 
-    System.out.println(Arrays.toString(values));
+      int[] values = {10, 20, 30, 40, 40, 50};
 
-    int splitPoint = findSplitPoint(values);
-    System.out.println("splitPoint: " + splitPoint);
+      System.out.println(Arrays.toString(values));
 
-  }
+      int splitPoint = findSplitPoint(values);
+      System.out.println("splitPoint: " + splitPoint);
 
-  private static int relativeDifference(int a, int b) {
-    if (a == b) {
-      return 0;
-    }
-    int absoluteDifference = Math.abs(a - b);
-    return (int) (100.0 * absoluteDifference / Math.max(a, b));
-  }
+   }
+
+   private static int relativeDifference(int a, int b) {
+      if (a == b) {
+         return 0;
+      }
+      int absoluteDifference = Math.abs(a - b);
+      return (int) (100.0 * absoluteDifference / Math.max(a, b));
+   }
 
 }

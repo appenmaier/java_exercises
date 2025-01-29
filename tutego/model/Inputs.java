@@ -21,50 +21,52 @@ import java.util.List;
  */
 public class Inputs implements Serializable {
 
-  public static class Input implements Serializable {
-    private static final long serialVersionUID = 1L;
-    public String input;
-  }
+   public static class Input implements Serializable {
 
-  private static final String PATH = "tutego/resources/inputs.bin";
-  private static final long serialVersionUID = 1L;
+      private static final long serialVersionUID = 1L;
+      public String input;
 
-  public static Inputs getInputs() {
-    try (FileInputStream fileInputStream = new FileInputStream(new File(PATH));
-        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
-      Inputs inputs = (Inputs) objectInputStream.readObject();
-      for (Input input : inputs.inputs) {
-        System.out.println(input.input);
+   }
+
+   private static final String PATH = "tutego/resources/inputs.bin";
+   private static final long serialVersionUID = 1L;
+
+   public static Inputs getInputs() {
+      try (FileInputStream fileInputStream = new FileInputStream(new File(PATH));
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+         Inputs inputs = (Inputs) objectInputStream.readObject();
+         for (Input input : inputs.inputs) {
+            System.out.println(input.input);
+         }
+         return inputs;
+      } catch (ClassNotFoundException e) {
+         e.printStackTrace();
+      } catch (EOFException e) {
+         e.printStackTrace();
+      } catch (IOException e) {
+         e.printStackTrace();
       }
-      return inputs;
-    } catch (ClassNotFoundException e) {
-      e.printStackTrace();
-    } catch (EOFException e) {
-      e.printStackTrace();
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-    return new Inputs();
-  }
+      return new Inputs();
+   }
 
-  public List<Input> inputs = new ArrayList<>();
+   public List<Input> inputs = new ArrayList<>();
 
-  private Inputs() {}
+   private Inputs() {}
 
-  public void addInput(Input input) {
-    inputs.add(input);
-    saveInputs();
-  }
+   public void addInput(Input input) {
+      inputs.add(input);
+      saveInputs();
+   }
 
-  private void saveInputs() {
-    try (FileOutputStream fileOutputStream = new FileOutputStream(new File(PATH));
-        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
-      objectOutputStream.writeObject(this);
-    } catch (FileNotFoundException e) {
-      e.printStackTrace();
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
+   private void saveInputs() {
+      try (FileOutputStream fileOutputStream = new FileOutputStream(new File(PATH));
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
+         objectOutputStream.writeObject(this);
+      } catch (FileNotFoundException e) {
+         e.printStackTrace();
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
+   }
 
 }

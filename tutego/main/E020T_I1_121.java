@@ -9,10 +9,10 @@ package tutego.main;
  */
 public class E020T_I1_121 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    System.out.println("Aye Captain!");
+      System.out.println("Aye Captain!");
 
-  }
+   }
 
 }

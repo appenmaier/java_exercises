@@ -11,10 +11,10 @@ import java.util.Comparator;
  */
 public class CoordinateByDistanceToOriginPointComparator implements Comparator<Coordinate> {
 
-  @Override
-  public int compare(Coordinate coordinate1, Coordinate coordinate2) {
-    return Double.compare(coordinate2.getDistanceToOriginPoint(),
-        coordinate1.getDistanceToOriginPoint());
-  }
+   @Override
+   public int compare(Coordinate coordinate1, Coordinate coordinate2) {
+      return Double.compare(coordinate2.getDistanceToOriginPoint(),
+            coordinate1.getDistanceToOriginPoint());
+   }
 
 }

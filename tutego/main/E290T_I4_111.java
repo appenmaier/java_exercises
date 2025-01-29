@@ -11,24 +11,24 @@ import java.util.Random;
  */
 public class E290T_I4_111 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    int size = 30;
-    Random rnd = new Random();
+      int size = 30;
+      Random rnd = new Random();
 
-    int[] windSpeed = new int[size];
-    int[] windDirection = new int[size];
+      int[] windSpeed = new int[size];
+      int[] windDirection = new int[size];
 
-    for (int i = 0; i < size; i++) {
-      windSpeed[i] = rnd.nextInt(200);
-      windDirection[i] = rnd.nextInt(360);
-    }
+      for (int i = 0; i < size; i++) {
+         windSpeed[i] = rnd.nextInt(200);
+         windDirection[i] = rnd.nextInt(360);
+      }
 
-    for (int i = 0; i < size; i++) {
-      System.out.println(
-          "Wind speed " + windSpeed[i] + " km/h and wind direction " + windDirection[i] + "°");
-    }
+      for (int i = 0; i < size; i++) {
+         System.out.println(
+               "Wind speed " + windSpeed[i] + " km/h and wind direction " + windDirection[i] + "°");
+      }
 
-  }
+   }
 
 }

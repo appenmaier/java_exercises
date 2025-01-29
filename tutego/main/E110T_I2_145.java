@@ -11,27 +11,27 @@ import java.util.Scanner;
  */
 public class E110T_I2_145 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    @SuppressWarnings("resource")
-    Scanner sc = new Scanner(System.in);
+      @SuppressWarnings("resource")
+      Scanner sc = new Scanner(System.in);
 
-    System.out.print("Gib bitte eine Bejahung ein: ");
-    String input = sc.nextLine();
+      System.out.print("Gib bitte eine Bejahung ein: ");
+      String input = sc.nextLine();
 
-    switch (input) {
-      case "ay":
-      case "aye":
-      case "ay, ay":
-      case "ja":
-      case "jo":
-        System.out.println("Keep it up!");
-        break;
-      default:
-        System.out.println("Don't you dare!");
-        break;
-    }
+      switch (input) {
+         case "ay":
+         case "aye":
+         case "ay, ay":
+         case "ja":
+         case "jo":
+            System.out.println("Keep it up!");
+            break;
+         default:
+            System.out.println("Don't you dare!");
+            break;
+      }
 
-  }
+   }
 
 }

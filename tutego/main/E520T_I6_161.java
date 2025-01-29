@@ -1,6 +1,7 @@
 package tutego.main;
 
 import java.util.ArrayList;
+
 import tutego.model.ElectronicDevice;
 import tutego.model.IceMachine;
 import tutego.model.Radio;
@@ -14,21 +15,21 @@ import tutego.model.Radio;
  */
 public class E520T_I6_161 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    ArrayList<ElectronicDevice> electronicDevices = new ArrayList<>();
+      ArrayList<ElectronicDevice> electronicDevices = new ArrayList<>();
 
-    Radio radio = new Radio();
-    IceMachine iceMachine = new IceMachine();
+      Radio radio = new Radio();
+      IceMachine iceMachine = new IceMachine();
 
-    electronicDevices.add(radio);
-    electronicDevices.add(iceMachine);
+      electronicDevices.add(radio);
+      electronicDevices.add(iceMachine);
 
-    for (ElectronicDevice e : electronicDevices) {
-      e.on();
-      System.out.println(e.toString());
-    }
+      for (ElectronicDevice e : electronicDevices) {
+         e.on();
+         System.out.println(e.toString());
+      }
 
-  }
+   }
 
 }

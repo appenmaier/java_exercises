@@ -12,37 +12,37 @@ import java.util.Scanner;
  */
 public class E220U_Felder05 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    @SuppressWarnings("resource")
-    Scanner sc = new Scanner(System.in);
+      @SuppressWarnings("resource")
+      Scanner sc = new Scanner(System.in);
 
-    System.out.print("Gib bitte die Groesse des Feldes ein: ");
-    int length = sc.nextInt();
+      System.out.print("Gib bitte die Groesse des Feldes ein: ");
+      int length = sc.nextInt();
 
-    int[] numbers = new int[length];
+      int[] numbers = new int[length];
 
-    for (int i = 0; i < length; i++) {
-      System.out.print("Gib bitte eine Zahl ein: ");
-      int number = sc.nextInt();
-      numbers[i] = number;
-    }
-
-    System.out.println(Arrays.toString(numbers));
-
-    int tmp;
-    for (int i = 1; i < numbers.length; i++) {
-      for (int j = 0; j < numbers.length - i; j++) {
-        if (numbers[j] > numbers[j + 1]) {
-          tmp = numbers[j];
-          numbers[j] = numbers[j + 1];
-          numbers[j + 1] = tmp;
-        }
+      for (int i = 0; i < length; i++) {
+         System.out.print("Gib bitte eine Zahl ein: ");
+         int number = sc.nextInt();
+         numbers[i] = number;
       }
-    }
 
-    System.out.println(Arrays.toString(numbers));
+      System.out.println(Arrays.toString(numbers));
 
-  }
+      int tmp;
+      for (int i = 1; i < numbers.length; i++) {
+         for (int j = 0; j < numbers.length - i; j++) {
+            if (numbers[j] > numbers[j + 1]) {
+               tmp = numbers[j];
+               numbers[j] = numbers[j + 1];
+               numbers[j + 1] = tmp;
+            }
+         }
+      }
+
+      System.out.println(Arrays.toString(numbers));
+
+   }
 
 }

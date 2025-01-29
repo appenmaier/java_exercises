@@ -13,15 +13,15 @@ import java.util.function.UnaryOperator;
  */
 public class E710T_I13_112 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    @SuppressWarnings("unused")
-    DoubleSupplier ds = () -> 0.0;
-    @SuppressWarnings("unused")
-    LongToDoubleFunction ltdf = value -> 1L;
-    @SuppressWarnings("unused")
-    UnaryOperator<String> up = t -> "";
+      @SuppressWarnings("unused")
+      DoubleSupplier ds = () -> 0.0;
+      @SuppressWarnings("unused")
+      LongToDoubleFunction ltdf = value -> 1L;
+      @SuppressWarnings("unused")
+      UnaryOperator<String> up = t -> "";
 
-  }
+   }
 
 }

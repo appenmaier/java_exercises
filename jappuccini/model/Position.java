@@ -9,6 +9,6 @@ package jappuccini.model;
  */
 public enum Position {
 
-  DEFENDER, GOALKEEPER, MIDFIELDER, STRIKER;
+   DEFENDER, GOALKEEPER, MIDFIELDER, STRIKER;
 
 }

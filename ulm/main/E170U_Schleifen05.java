@@ -1,6 +1,7 @@
 package ulm.main;
 
 import java.util.Scanner;
+
 import ulm.model.Printer;
 
 /**
@@ -12,21 +13,21 @@ import ulm.model.Printer;
  */
 public class E170U_Schleifen05 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    @SuppressWarnings("resource")
-    Scanner sc = new Scanner(System.in);
+      @SuppressWarnings("resource")
+      Scanner sc = new Scanner(System.in);
 
-    System.out.print("Gib bitte eine Anzahl Zeichen ein: ");
-    int numberOfCharacters = sc.nextInt();
+      System.out.print("Gib bitte eine Anzahl Zeichen ein: ");
+      int numberOfCharacters = sc.nextInt();
 
-    Printer.printPattern(numberOfCharacters);
+      Printer.printPattern(numberOfCharacters);
 
-    System.out.print("Gib bitte eine Zeichenkette ein: ");
-    String text = sc.next();
+      System.out.print("Gib bitte eine Zeichenkette ein: ");
+      String text = sc.next();
 
-    Printer.printPatternWithText(text);
+      Printer.printPatternWithText(text);
 
-  }
+   }
 
 }

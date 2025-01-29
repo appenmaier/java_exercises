@@ -9,12 +9,12 @@ package koblenz.main;
  */
 public class E010K_A1 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    System.out.println("Daniel");
-    System.out.println("Appenmaier");
-    System.out.println("daniel.appenmaier@sap.com");
+      System.out.println("Daniel");
+      System.out.println("Appenmaier");
+      System.out.println("daniel.appenmaier@sap.com");
 
-  }
+   }
 
 }

@@ -12,19 +12,19 @@ import tutego.model.Radio.Modulation;
  */
 public class E460T_I6_132 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    Radio radio1 = new Radio("DASDING");
-    radio1.setModulation(Modulation.FM);
-    radio1.on();
-    radio1.volumeUp();
-    radio1.volumeUp();
+      Radio radio1 = new Radio("DASDING");
+      radio1.setModulation(Modulation.FM);
+      radio1.on();
+      radio1.volumeUp();
+      radio1.volumeUp();
 
-    Radio radio2 = new Radio(radio1);
+      Radio radio2 = new Radio(radio1);
 
-    System.out.println(radio1.toString());
-    System.out.println(radio2.toString());
+      System.out.println(radio1.toString());
+      System.out.println(radio2.toString());
 
-  }
+   }
 
 }

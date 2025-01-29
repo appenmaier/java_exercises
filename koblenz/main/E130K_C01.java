@@ -1,6 +1,7 @@
 package koblenz.main;
 
 import java.util.Scanner;
+
 import koblenz.model.Calculator;
 
 /**
@@ -12,21 +13,21 @@ import koblenz.model.Calculator;
  */
 public class E130K_C01 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    @SuppressWarnings("resource")
-    Scanner sc = new Scanner(System.in);
+      @SuppressWarnings("resource")
+      Scanner sc = new Scanner(System.in);
 
-    System.out.print("Bitte gib einen Wert fuer m ein: ");
-    int m = sc.nextInt();
+      System.out.print("Bitte gib einen Wert fuer m ein: ");
+      int m = sc.nextInt();
 
-    System.out.print("Bitte gib einen Wert fuer n ein: ");
-    int n = sc.nextInt();
+      System.out.print("Bitte gib einen Wert fuer n ein: ");
+      int n = sc.nextInt();
 
-    int total = Calculator.calculateSumWithWile(m, n);
+      int total = Calculator.calculateSumWithWile(m, n);
 
-    System.out.println("total: " + total);
+      System.out.println("total: " + total);
 
-  }
+   }
 
 }

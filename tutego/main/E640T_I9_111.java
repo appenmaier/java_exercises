@@ -13,31 +13,31 @@ import java.util.Scanner;
  */
 public class E640T_I9_111 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    File file = new File("tutego/resources/family-names.txt");
+      File file = new File("tutego/resources/family-names.txt");
 
-    try {
-      @SuppressWarnings("resource")
-      Scanner sc = new Scanner(file);
+      try {
+         @SuppressWarnings("resource")
+         Scanner sc = new Scanner(file);
 
-      int maxLength = 0;
-      String longestName = "";
+         int maxLength = 0;
+         String longestName = "";
 
-      while (sc.hasNextLine()) {
-        String line = sc.nextLine();
-        // System.out.println(line + " (" + line.length() + ")" );
-        if (line.length() > maxLength) {
-          maxLength = line.length();
-          longestName = line;
-        }
+         while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+            // System.out.println(line + " (" + line.length() + ")" );
+            if (line.length() > maxLength) {
+               maxLength = line.length();
+               longestName = line;
+            }
+         }
+
+         System.out.println("longestName: " + longestName);
+      } catch (FileNotFoundException e) {
+         e.printStackTrace();
       }
 
-      System.out.println("longestName: " + longestName);
-    } catch (FileNotFoundException e) {
-      e.printStackTrace();
-    }
-
-  }
+   }
 
 }

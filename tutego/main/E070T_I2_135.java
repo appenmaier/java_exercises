@@ -11,16 +11,16 @@ import java.util.Scanner;
  */
 public class E070T_I2_135 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    @SuppressWarnings("resource")
-    Scanner sc = new Scanner(System.in);
+      @SuppressWarnings("resource")
+      Scanner sc = new Scanner(System.in);
 
-    System.out.print("Gib bitte die Anzahl Flaschen ein: ");
-    int numberOfBottles = sc.nextInt();
+      System.out.print("Gib bitte die Anzahl Flaschen ein: ");
+      int numberOfBottles = sc.nextInt();
 
-    String text = numberOfBottles == 1 ? "Eine Flasche Rum" : numberOfBottles + " Flaschen Rum";
-    System.out.println(text);
-  }
+      String text = numberOfBottles == 1 ? "Eine Flasche Rum" : numberOfBottles + " Flaschen Rum";
+      System.out.println(text);
+   }
 
 }

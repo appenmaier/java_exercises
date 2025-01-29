@@ -13,22 +13,22 @@ import tutego.model.TV;
  */
 public class E635T_I8_115 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    Ship ship = new Ship();
-    TV tv1 = new TV();
-    TV tv2 = new TV();
-    IceMachine iceMachine = new IceMachine();
+      Ship ship = new Ship();
+      TV tv1 = new TV();
+      TV tv2 = new TV();
+      IceMachine iceMachine = new IceMachine();
 
-    tv1.setWatt(80);
-    tv2.setWatt(120);
-    iceMachine.setWatt(150);
+      tv1.setWatt(80);
+      tv2.setWatt(120);
+      iceMachine.setWatt(150);
 
-    ship.addAllElectronicDevices(tv1, tv2, iceMachine);
-    ship.removePowerConsumingElectronicDevices();
+      ship.addAllElectronicDevices(tv1, tv2, iceMachine);
+      ship.removePowerConsumingElectronicDevices();
 
-    System.out.println(ship.toString());
+      System.out.println(ship.toString());
 
-  }
+   }
 
 }

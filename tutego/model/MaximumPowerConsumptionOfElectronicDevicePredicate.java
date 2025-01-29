@@ -10,21 +10,21 @@ import java.util.function.Predicate;
  *
  */
 public class MaximumPowerConsumptionOfElectronicDevicePredicate
-    implements Predicate<ElectronicDevice> {
+      implements Predicate<ElectronicDevice> {
 
-  public int maximumPowerConsumption;
+   public int maximumPowerConsumption;
 
-  public MaximumPowerConsumptionOfElectronicDevicePredicate(int maximumPowerConsumption) {
-    this.maximumPowerConsumption = maximumPowerConsumption;
-  }
+   public MaximumPowerConsumptionOfElectronicDevicePredicate(int maximumPowerConsumption) {
+      this.maximumPowerConsumption = maximumPowerConsumption;
+   }
 
-  @Override
-  public boolean test(ElectronicDevice e) {
-    if (e.getWatt() > maximumPowerConsumption) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+   @Override
+   public boolean test(ElectronicDevice e) {
+      if (e.getWatt() > maximumPowerConsumption) {
+         return true;
+      } else {
+         return false;
+      }
+   }
 
 }

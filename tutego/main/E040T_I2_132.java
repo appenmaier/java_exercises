@@ -11,29 +11,29 @@ import java.util.Scanner;
  */
 public class E040T_I2_132 {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    @SuppressWarnings("resource")
-    Scanner sc = new Scanner(System.in);
+      @SuppressWarnings("resource")
+      Scanner sc = new Scanner(System.in);
 
-    System.out.print("Gib bitte die Anzahl Flaschen ein ");
-    int numberOfBottles = sc.nextInt();
+      System.out.print("Gib bitte die Anzahl Flaschen ein ");
+      int numberOfBottles = sc.nextInt();
 
-    int numberOfBottlesForCiaoCiao = numberOfBottles / 2;
-    System.out.println("CiaoCiao bekommt " + numberOfBottlesForCiaoCiao + " Flaschen");
+      int numberOfBottlesForCiaoCiao = numberOfBottles / 2;
+      System.out.println("CiaoCiao bekommt " + numberOfBottlesForCiaoCiao + " Flaschen");
 
-    numberOfBottles -= numberOfBottlesForCiaoCiao;
+      numberOfBottles -= numberOfBottlesForCiaoCiao;
 
-    System.out.print("Gib bitte die Anzahl Crewmitglieder ein ");
-    int numberOfCrewMembers = sc.nextInt();
+      System.out.print("Gib bitte die Anzahl Crewmitglieder ein ");
+      int numberOfCrewMembers = sc.nextInt();
 
-    if (numberOfBottles % numberOfCrewMembers == 0) {
-      System.out.println("Ja, die Flaschen koennen gerecht aufgeteilt werden ("
-          + (numberOfBottles / numberOfCrewMembers) + " Flaschen)");
-    } else {
-      System.out.println("Nein, die Flaschen koennen nicht gerecht aufgeteilt werden");
-    }
+      if (numberOfBottles % numberOfCrewMembers == 0) {
+         System.out.println("Ja, die Flaschen koennen gerecht aufgeteilt werden ("
+               + (numberOfBottles / numberOfCrewMembers) + " Flaschen)");
+      } else {
+         System.out.println("Nein, die Flaschen koennen nicht gerecht aufgeteilt werden");
+      }
 
-  }
+   }
 
 }
