@@ -1,33 +1,11 @@
-# Arbeiten mit diesem Repository
+# Musterlösungen Übungsaufgaben
 
-## Vorbereitungen
+Dieses Repo beinhaltet Musterlösungen zu den Übungsaufgaben auf der Webseite [Programmieren mit Java](https://jappuccini.github.io/java-docs/production/). Das Arbeiten mit diesem Repo wird [hier](https://jappuccini.github.io/java-docs/production/additional-material/daniel/github-repos) beschrieben.
 
-- Installiere ein [JDK](https://www.oracle.com/java/technologies/downloads/#jdk21-windows)
-- Installiere [Eclipse](https://www.eclipse.org/), [BlueJ](https://www.bluej.org/index.html) oder eine andere IDE
-- Installiere [Git](https://git-scm.com/downloads)
+## Aufbau
 
-## Klone das remote Repository
-
-- Starte die Kommandozeile (z.B. Windows PowerShell)
-- Führe den Befehl `git clone https://github.com/appenmaier/java_exercises "[Pfad/Der Name Deines lokalen Repositorys]"` aus, um das remote Repository zu klonen
-
-## Binde das lokale Repository in Eclipse oder in BlueJ ein
-
-### Option 1: Eclipse
-
-- Starte Eclipse
-- Führe die Funktion `File - Import... - General - Projects from Folder or Archive` aus und betätige die Drucktaste `Next >`
-- Gib nachfolgende Informationen ein und betätige die Drucktaste `Finish`
-  - Import source: `[Pfad/Der Name Deines lokalen Repositorys]`
-
-### Option 2: BlueJ
-
-- Starte BlueJ
-- Führe die Funktion `Projekt - Fremdprojekt öffnen...` aus
-- Navigiere zu `[Pfad/Der Name Deines lokalen Repositorys]` betätige die Drucktaste `Select Folder`
-
-## Aktualisiere das lokale Repository (bei Bedarf)
-
-- Starte die Kommandozeile (z.B. Windows PowerShell)
-- Führe den Befehl `cd "[Pfad/Der Name Deines lokalen Repositorys]"` aus, um zum Arbeitsbereich Deines lokalen Repositorys zu wechseln
-- Führe den Befehl `git pull` aus, um den Arbeitsbereich zu aktualisieren
+- Im Paket `jappuccini` befinden sich Musterlösungen zu den Übungsaufgaben von Daniel Appenmaier und Steffen Merk
+- Im Paket `koblenz` befinden sich Musterlösungen zu den Übungsaufgaben der Uni Koblenz-Landau
+- Im Paket `ntu` befinden sich Musterlösungen zu den Übungsaufgaben der Nanyang Technological University Singapore
+- Im Paket `tutego` befinden sich Musterlösungen zu den Übungsaufgaben des Unternehmens tutego
+- Im Paket `ulm` befinden sich Musterlösungen zu den Übungsaufgaben der Technischen Hochschule Ulm
