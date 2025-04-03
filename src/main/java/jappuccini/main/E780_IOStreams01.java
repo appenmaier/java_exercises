@@ -1,11 +1,11 @@
 package jappuccini.main;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -13,32 +13,29 @@ import java.util.Scanner;
 import jappuccini.model.Student;
 
 /**
- * IOStreams02
+ * IOStreams01
  *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class E790_IOStreams02 {
+public class E780_IOStreams01 {
 
    private static File file;
    private static List<Student> students;
 
    @SuppressWarnings("resource")
    public static void main(String[] args) throws IOException {
-
       Scanner scanner = new Scanner(System.in);
 
-      file = new File("jappuccini/resources/students.bin");
+      file = new File("src/main/resources/students.txt");
       if (!file.exists()) {
          file.createNewFile();
       }
-
       students = new ArrayList<>();
 
       System.out.print("Moechtest Du Lesen (1) oder Schreiben (2): ");
       int answer = scanner.nextInt();
-
       if (answer == 1) {
          read();
       } else {
@@ -51,23 +48,32 @@ public class E790_IOStreams02 {
          write();
       }
       students.forEach(System.out::println);
-
    }
 
-   @SuppressWarnings("unchecked")
    public static void read() {
-      try (FileInputStream fileInputStream = new FileInputStream(file);
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
-         students = (ArrayList<Student>) objectInputStream.readObject();
-      } catch (IOException | ClassNotFoundException e) {
+      try (FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader)) {
+         String line;
+         while ((line = bufferedReader.readLine()) != null) {
+            String[] tokens = line.split(";");
+            String name = tokens[0];
+            int age = Integer.valueOf(tokens[1]);
+            Student student = new Student(name, age);
+            students.add(student);
+         }
+      } catch (IOException e) {
          e.printStackTrace();
       }
    }
 
    public static void write() {
-      try (FileOutputStream fileOutputStream = new FileOutputStream(file);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
-         objectOutputStream.writeObject(students);
+      try (FileWriter fileWriter = new FileWriter(file, false);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+         for (Student s : students) {
+            String line = s.name() + ";" + s.age();
+            bufferedWriter.write(line);
+            bufferedWriter.newLine();
+         }
       } catch (IOException e) {
          e.printStackTrace();
       }

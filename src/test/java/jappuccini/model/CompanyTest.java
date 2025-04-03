@@ -1,4 +1,4 @@
-package jappuccini.test;
+package jappuccini.model;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -6,11 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import jappuccini.model.Company;
 import jappuccini.model.Company.Employee;
-import jappuccini.model.Person;
-import jappuccini.model.SalaryDecreaseException;
-import jappuccini.model.SalaryIncreaseTooHighException;
 
 /**
  * CompanyTest

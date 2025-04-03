@@ -1,4 +1,4 @@
-package jappuccini.test;
+package jappuccini.model;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -7,10 +7,6 @@ import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import jappuccini.model.Person;
-import jappuccini.model.TelephoneBook;
-import jappuccini.model.TelephoneNumber;
 
 /**
  * TelephoneBookTest

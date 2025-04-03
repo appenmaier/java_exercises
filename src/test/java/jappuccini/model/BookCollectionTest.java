@@ -1,4 +1,4 @@
-package jappuccini.test;
+package jappuccini.model;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -9,11 +9,6 @@ import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import jappuccini.model.Author;
-import jappuccini.model.Book;
-import jappuccini.model.BookCollection;
-import jappuccini.model.DuplicateKeyException;
 
 /**
  * BookCollectionTest

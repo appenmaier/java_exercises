@@ -1,17 +1,10 @@
-package jappuccini.test;
+package jappuccini.model;
 
-import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import jappuccini.model.Car;
-import jappuccini.model.Engine;
-import jappuccini.model.InvalidValueException;
-import jappuccini.model.Rental;
-import jappuccini.model.Truck;
-import jappuccini.model.Vehicle;
 
 /**
  * RentalTest
